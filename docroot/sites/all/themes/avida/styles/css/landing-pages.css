@@ -1,0 +1,85 @@
+.landing-coming-soon .row {
+  max-width: 950px; }
+.landing-coming-soon .header-top .inner-container {
+  width: 100%; }
+.landing-coming-soon #logo {
+  display: block;
+  clear: both;
+  width: 100%;
+  max-width: 460px;
+  margin: 20px auto 60px; }
+  .landing-coming-soon #logo img {
+    display: block; }
+.landing-coming-soon h1 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 42px;
+  color: #034f55; }
+.landing-coming-soon .body-emph {
+  width: 100%;
+  max-width: 880px;
+  margin: auto;
+  font-size: 18px; }
+.landing-coming-soon .copyright-footer {
+  display: none; }
+.landing-coming-soon .sutro-column-content {
+  background: #afb81d; }
+  .landing-coming-soon .sutro-column-content .sutro-column1 .sutro-column-inner {
+    border-right: 20px solid #fff;
+    margin-right: 0; }
+
+.lp-changing-lives {
+  width: 100%;
+  max-width: 760px;
+  padding: 5px;
+  background: #008e91;
+  margin: auto;
+  text-align: center;
+  color: #fff; }
+  .lp-changing-lives h2 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5; }
+
+.coming-soon-boxes {
+  color: #fff; }
+  .coming-soon-boxes h2 {
+    margin: 0;
+    padding: 10px 40px;
+    background: #008e91;
+    font-weight: normal;
+    font-size: 16px; }
+  .coming-soon-boxes .content,
+  .coming-soon-boxes .pane-content {
+    padding: 10px 0;
+    background: #afb81d; }
+    .coming-soon-boxes .content ul,
+    .coming-soon-boxes .pane-content ul {
+      padding: 0 20px 0 40px;
+      margin: 0; }
+
+.coming-soon-contact-info {
+  margin-top: 60px;
+  text-align: center;
+  color: #034f55; }
+  .coming-soon-contact-info h2 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 16px; }
+  .coming-soon-contact-info .content a:link, .coming-soon-contact-info .content a:visited, .coming-soon-contact-info .content a:hover, .coming-soon-contact-info .content a:active, .coming-soon-contact-info .content a:focus,
+  .coming-soon-contact-info .pane-content a:link,
+  .coming-soon-contact-info .pane-content a:visited,
+  .coming-soon-contact-info .pane-content a:hover,
+  .coming-soon-contact-info .pane-content a:active,
+  .coming-soon-contact-info .pane-content a:focus {
+    color: #034f55; }
+  .coming-soon-contact-info .content ul,
+  .coming-soon-contact-info .pane-content ul {
+    padding: 0;
+    margin: 0; }
+    .coming-soon-contact-info .content ul li,
+    .coming-soon-contact-info .pane-content ul li {
+      list-style: none;
+      padding: 0;
+      margin: 0; }

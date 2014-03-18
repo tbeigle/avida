@@ -1,0 +1,54 @@
+// Colors
+$colLogoLght: #008e91;
+$colLogoDrk: #034f55;
+$colLogoGrn: #afb81d;
+
+// Font families
+
+// Mixins
+@mixin vendorize($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+@mixin clear() {
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin linkTextOffscreen() {
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+  font-size: 0;
+  text-align: start;
+}
+
+@mixin linkAllStates($property, $value) {
+  &:link, &:visited, &:hover, &:active, &:focus {
+    #{$property}: $value;
+  }
+}
+
+@mixin linkVisited($property, $value) {
+  &:link, &:visited {
+    #{$property}: $value;
+  }
+}
+
+@mixin hoverActiveFocus($property, $value) {
+  &:hover, &:active, &:focus {
+    #{$property}: $value;
+  }
+}

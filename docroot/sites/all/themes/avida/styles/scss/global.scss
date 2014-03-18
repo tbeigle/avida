@@ -1,0 +1,73 @@
+@import "mixins";
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
+a {
+  @include vendorize(transition, all 0.25s ease);
+  @include linkAllStates(text-decoration, none);
+  @include linkAllStates(outline, none);
+  //@include linkVisited(color, $colPreEPJacket);
+  //@include hoverActiveFocus(color, $colDenim);
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font: 16px/1.5 helvetica, arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.row {
+  width: 100%;
+  max-width: 1020px;
+  margin: auto;
+}
+
+.body-emph {
+  text-align: center;
+  color: $colLogoDrk;
+}
+
+.horizontal.with-bullets {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 0;
+  line-height: 0;
+  
+  li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    
+    &:before {
+      display: inline-block;
+      width: 20px;
+      text-align: center;
+      content: "\2022";
+    }
+    
+    &:first-child {
+      padding: 0;
+      margin: 0;
+      
+      &:before {
+        display: none;
+      }
+    }
+  }
+}

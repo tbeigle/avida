@@ -1,0 +1,60 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  width: 100%;
+  margin: 0; }
+
+a {
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease; }
+  a:link, a:visited, a:hover, a:active, a:focus {
+    text-decoration: none; }
+  a:link, a:visited, a:hover, a:active, a:focus {
+    outline: none; }
+
+body {
+  width: 100%;
+  margin: 0;
+  font: 16px/1.5 helvetica, arial, sans-serif; }
+
+.container {
+  width: 100%;
+  padding: 0 20px; }
+
+.row {
+  width: 100%;
+  max-width: 1020px;
+  margin: auto; }
+
+.body-emph {
+  text-align: center;
+  color: #034f55; }
+
+.horizontal.with-bullets {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 0;
+  line-height: 0; }
+  .horizontal.with-bullets li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5; }
+    .horizontal.with-bullets li:before {
+      display: inline-block;
+      width: 20px;
+      text-align: center;
+      content: "\2022"; }
+    .horizontal.with-bullets li:first-child {
+      padding: 0;
+      margin: 0; }
+      .horizontal.with-bullets li:first-child:before {
+        display: none; }

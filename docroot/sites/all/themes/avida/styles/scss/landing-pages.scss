@@ -1,0 +1,135 @@
+@import "mixins";
+
+.landing-coming-soon {
+  .row {
+    max-width: 950px;
+  }
+  
+  .header-top {
+    .inner-container {
+      width: 100%;
+    }
+  }
+  
+  #logo {
+    display: block;
+    clear: both;
+    width: 100%;
+    max-width: 460px;
+    margin: 20px auto 60px;
+    
+    img {
+      display: block;
+    }
+  }
+  
+  h1 {
+    text-align: center;
+    font: {
+      weight: normal;
+      size: 42px;
+    }
+    color: $colLogoDrk;
+  }
+  
+  .body-emph {
+    width: 100%;
+    max-width: 880px;
+    margin: auto;
+    font-size: 18px;
+  }
+  
+  .copyright-footer {
+    display: none;
+  }
+  
+  .sutro-column-content {
+    background: $colLogoGrn;
+    
+    .sutro-column1 {
+      .sutro-column-inner {
+        border-right: 20px solid #fff;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.lp-changing-lives {
+  width: 100%;
+  max-width: 760px;
+  padding: 5px;
+  background: $colLogoLght;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  
+  h2 {
+    margin: 0;
+    
+    font: {
+      weight: normal;
+      size: 16px;
+    }
+    
+    line-height: 1.5;
+  }
+}
+
+.coming-soon-boxes {
+  color: #fff;
+  
+  h2 {
+    margin: 0;
+    padding: 10px 40px;
+    background: $colLogoLght;
+    font: {
+      weight: normal;
+      size: 16px;
+    }
+  }
+  
+  .content,
+  .pane-content {
+    padding: 10px 0;
+    background: $colLogoGrn;
+    
+    ul {
+      padding: 0 20px 0 40px;
+      margin: 0;
+    }
+  }
+}
+
+.coming-soon-contact-info {
+  margin-top: 60px;
+  text-align: center;
+  color: $colLogoDrk;
+  
+  h2 {
+    margin: 0;
+    
+    font: {
+      weight: normal;
+      size: 16px;
+    }
+  }
+  
+  .content,
+  .pane-content {
+    a {
+      @include linkAllStates(color, $colLogoDrk);
+    }
+    
+    ul {
+      padding: 0;
+      margin: 0;
+      
+      li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}
