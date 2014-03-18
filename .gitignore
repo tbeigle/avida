@@ -1,4 +1,5 @@
 log
 tmp
 docs
+*.DS_Store
 
