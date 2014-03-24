@@ -1,0 +1,4 @@
+name = "Avida Site Module"
+description = "Provides avidainc.com-specific functionality."
+core = 7.x
+package = Avida

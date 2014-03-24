@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Custom module for miscellaneous features on avidainc.com
+ */
+
+/**
+ * Implements hook_init()
+ */
+function avida_site_init() {
+  /*$data = 'http://fonts.googleapis.com/css?family=Chivo:400,400italic,900';
+  $options = array(
+    'type' => 'external',
+  );
+  
+  drupal_add_css($data, $options);*/
+}
