@@ -7,21 +7,57 @@
 
 body {
   width: 100%;
+  background: $colLogoDrk;
   margin: 0;
+  font: 12px/1.2 $fontFamSansMain;
+  color: $colFontMain;
+}
+
+h1 {
+  height: 122px;
+  padding: {
+    top: 74px;
+    right: 20px;
+    left: 20px;
+  }
+  
+  background: $colTitleTan;
+  margin: 30px 0 64px;
+  font: bold 34px/1.1 $fontFamSansSpec;
+  color: $colFontBlck;
+}
+
+p {
+  margin: 0 0 12px;
 }
 
 a {
   @include vendorize(transition, all 0.25s ease);
-  @include linkAllStates(text-decoration, none);
   @include linkAllStates(outline, none);
-  //@include linkVisited(color, $colPreEPJacket);
-  //@include hoverActiveFocus(color, $colDenim);
+  @include linkAllStates(color, $colFontTurq);
+  @include linkVisited(text-decoration, none);
+  @include hoverActiveFocus(text-decoration, underline);
 }
 
-body {
-  width: 100%;
-  margin: 0;
-  font: 16px/1.5 helvetica, arial, sans-serif;
+#page-wrapper {
+  background: url('../../images/bg-lines.jpg') 0 0 repeat;
+  
+  &> .inner {
+    padding: 28px 25px 40px;
+    background: #fff;
+    border: {
+      left: 2px solid $colPageBrdr;
+      right: 2px solid $colPageBrdr;
+    }
+  }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
 
 .container {
@@ -70,4 +106,99 @@ body {
       }
     }
   }
+}
+
+.mobile-title {
+  .block-title {
+    display: none;
+  }
+}
+
+// Logo and navigation
+.page-header {
+  position: relative;
+  
+  .logo-header {
+    width: 15.114%;
+    max-width: 146px;
+  }
+  
+  .header-logo {
+    position: relative;
+    z-index: 2;
+    
+    a,
+    img {
+      display: block;
+    }
+  }
+  
+  .nav-region {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    
+    .block-menu {
+      .content {
+        &> ul.menu {
+          padding: 0;
+          margin: 0;
+          text-align: right;
+          font: 14px/20px $fontFamSansSpec;
+          color: $colFontNavLink;
+          
+          a {
+            @include linkAllStates(color, $colFontNavLink);
+          }
+          
+          .leaf {
+            list-style: none;
+            display: inline-block;
+            background: url('../../images/bg-nav-link-leaf.png') 0 0 no-repeat;
+            padding: 0 0 0 20px;
+            margin: 0 0 0 10px;
+            
+            &:first-child {
+              background: none;
+              padding: 0;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.with-right-sidebar {
+  #content-wrapper {
+    width: 75.2825%;
+    max-width: 674px;
+  }
+  
+  #page-sidebar-second {
+    width: 22.5165%;
+    max-width: 204px;
+  }
+}
+
+// Footer
+#footer {
+  padding: 25px 60px;
+  
+  a {
+    @include linkAllStates(color, #fff);
+  }
+  
+  .copyright-footer a {
+    @include linkVisited(text-decoration, underline);
+    @include hoverActiveFocus(text-decoration, none);
+  }
+}
+
+.copyright-footer {
+  font: 11px/1.64 'Chivo', Arial, Helvetica, sans-serif;
+  color: #fff;
 }

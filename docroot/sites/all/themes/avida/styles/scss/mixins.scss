@@ -2,8 +2,17 @@
 $colLogoLght: #008e91;
 $colLogoDrk: #034f55;
 $colLogoGrn: #afb81d;
+$colPageBrdr: #e0e1d7;
+$colTitleTan: #f6f5f1;
+$colFontMain: #777;
+$colFontNavLink: #767676;
+$colFontDrk: #333;
+$colFontBlck: #292418;
+$colFontTurq: #008e91;
 
 // Font families
+$fontFamSansMain: arial, helvetica, sans-serif;
+$fontFamSansSpec: 'Chivo', arial, helvetica, sans-serif;
 
 // Mixins
 @mixin vendorize($property, $value) {

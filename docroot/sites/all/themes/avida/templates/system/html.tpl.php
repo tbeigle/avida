@@ -54,6 +54,7 @@
       <script src="<?php print $html_shiv; ?>"></script>
     <![endif]-->
   <?php endif; ?>
+  <link href='http://fonts.googleapis.com/css?family=Chivo:400,400italic,900' rel='stylesheet' type='text/css'>
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
