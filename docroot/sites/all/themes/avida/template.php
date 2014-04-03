@@ -16,18 +16,8 @@ function avida_preprocess_block(&$vars) {
 function avida_preprocess_html(&$vars) {
   global $theme_path;
   
-  $vars['html_shiv'] = '/';
-  
-  if (!empty($vars['directory'])) {
-    $vars['html_shiv'] .= trim($vars['directory'], '/');
-  }
-  else {
-    $vars['html_shiv'] .= trim($theme_path, '/');
-  }
-  
-  $vars['html_shiv'] .= '/scripts/js/vendor/html5shiv.js';
-  
   _avida_apple_touch_icons();
+  _avida_lt_ie_9($vars, $theme_path);
 }
 
 /**
@@ -62,4 +52,22 @@ function _avida_apple_touch_icons() {
     
     drupal_add_html_head($element, 'apple_touch_icon_' . $size);
   }
+}
+
+/**
+ * Helper function for building the IE8 and below contents
+ */
+function _avida_lt_ie_9(&$vars, $theme_path) {
+  $path_prefix = '/' . trim(!empty($vars['directory']) ? $vars['directory'] : $theme_path, '/');
+  
+  $vars['lt_ie_9'] = array(
+    '#prefix' => '<!--[if lt IE 9]>',
+    '#suffix' => '<![endif]-->',
+    array(
+      '#markup' => '<script src="' . $path_prefix . '/scripts/js/vendor/html5shiv.js"></script>',
+    ),
+    array(
+      '#markup' => '<link rel="stylesheet" type="text/css" href="' . $path_prefix . '/styles/css/lt-ie-9.css" media="all" />',
+    ),
+  );
 }

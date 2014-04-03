@@ -49,13 +49,11 @@
   <?php print $head; ?>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?php print $head_title; ?></title>
-  <?php if (!empty($html_shiv)): ?>
-    <!--[if lt IE 9]>
-      <script src="<?php print $html_shiv; ?>"></script>
-    <![endif]-->
-  <?php endif; ?>
   <link href='http://fonts.googleapis.com/css?family=Chivo:400,400italic,900' rel='stylesheet' type='text/css'>
   <?php print $styles; ?>
+  <?php if (!empty($lt_ie_9)): ?>
+    <?php print drupal_render($lt_ie_9); ?>
+  <?php endif; ?>
   <?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>

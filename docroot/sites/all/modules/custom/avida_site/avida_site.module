@@ -15,3 +15,16 @@ function avida_site_init() {
   
   drupal_add_css($data, $options);*/
 }
+
+/**
+ * Implements hook_date_formatter_dates_alter().
+ */
+function avida_site_date_formatter_dates_alter(&$dates, $context) {
+  $format_type = !empty($context['display']['settings']['format_type']) ? $context['display']['settings']['format_type'] : '';
+  if ($format_type != 'event_teaser') return;
+  
+  foreach ($dates as &$value) {
+    $formatted_array = explode(' ', $value['formatted']);
+    $value['formatted'] = $formatted_array[0] . ' <strong>' . $formatted_array[1] . '</strong>';
+  }
+}

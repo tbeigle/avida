@@ -1,4 +1,5 @@
 @import "mixins";
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -34,7 +35,7 @@ p {
 a {
   @include vendorize(transition, all 0.25s ease);
   @include linkAllStates(outline, none);
-  @include linkAllStates(color, $colFontTurq);
+  @include linkAllStates(color, $colLogoGrn);
   @include linkVisited(text-decoration, none);
   @include hoverActiveFocus(text-decoration, underline);
 }
@@ -43,6 +44,7 @@ a {
   background: url('../../images/bg-lines.jpg') 0 0 repeat;
   
   &> .inner {
+    max-width: 964px;
     padding: 28px 25px 40px;
     background: #fff;
     border: {
@@ -74,6 +76,12 @@ a {
 .body-emph {
   text-align: center;
   color: $colLogoDrk;
+}
+
+.mobile-title {
+  .block-title {
+    display: none;
+  }
 }
 
 .horizontal.with-bullets {
@@ -108,9 +116,142 @@ a {
   }
 }
 
-.mobile-title {
-  .block-title {
-    display: none;
+.orange-circle {
+  width: 52px;
+  height: 52px;
+  padding: 6px 0 0;
+  background: $colDateCircle;
+  @include vendorize(border-radius, 50%);
+  font: 12px/1 $fontFamSansSpec;
+  
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+  
+  color: #fff;
+  
+  strong {
+    display: block;
+    
+    font: {
+      size: 28px;
+      weight: normal;
+    }
+  }
+}
+.more-box,
+.h2-short-line  h2 {
+  padding: 0 0 28px;
+  background: url('../../images/border-with-bulb-130x8.png') right bottom no-repeat;
+}
+.more-box {
+  .pane-content,
+  p {
+    a {
+      display: inline-block;
+      height: 36px;
+      padding: {
+        top: 6px;
+        right: 16px;
+        left: 16px;
+      }
+      background: $colLrnMrBG;
+      border: 1px solid $colLrnMrBrdr;
+      font: 12px/1.5 $fontFamSansSpec;
+      
+      &:link,
+      &:visited,
+      &:hover,
+      &:focus,
+      &:active {
+        color: $colFontBlck;
+      }
+      
+      @include linkVisited(text-decoration, underline);
+      @include hoverActiveFocus(text-decoration, none);
+    }
+  }
+}
+
+// Basic pages with events sidebar
+body.single-node {
+  &.basic-page {
+    .panel-display.burr-flipped.container {
+      padding: 0;
+    }
+    .burr-flipped-content {
+      width: 77.4725%;
+    }
+    .burr-flipped-content-inner {
+      margin-right: 5.1063%;
+    }
+    .burr-flipped-sidebar {
+      float: right;
+      width: 22.5274%;
+    }
+  }
+}
+
+.views-list {
+  .container {
+    padding: 0;
+  }
+  
+  &.events-list {
+    ul.events {
+      padding: 0;
+      margin: 0;
+      
+      li {
+        list-style: none;
+        padding: 36px 0 0 0;
+        margin: 0;
+      }
+    }
+    
+    .brenham-container {
+      margin: 0;
+    }
+    
+    .event-title {
+      margin: 0 0 4px;
+      font: 14px/1 $fontFamSansSpec;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $colFontTurq;
+      
+      a {
+        @include linkAllStates(color, $colFontTurq);
+      }
+    }
+    
+    .brenham-column-content {
+      position: relative;
+      padding-left: 74px;
+    }
+    
+    .brenham-sidebar {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 52px;
+    }
+    
+    .brenham-sidebar-inner {
+      margin-right: 0;
+    }
+    
+    .brenham-content {
+      float: right;
+      width: 100%;
+      font-size: 11px;
+      line-height: 1.45;
+      
+      p {
+        margin: 3px 0 0;
+      }
+    }
   }
 }
 
@@ -186,7 +327,10 @@ a {
 
 // Footer
 #footer {
+  width: 100%;
+  max-width: 964px;
   padding: 25px 60px;
+  margin: auto;
   
   a {
     @include linkAllStates(color, #fff);
