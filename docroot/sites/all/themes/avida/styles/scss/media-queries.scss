@@ -20,6 +20,18 @@
       }
     }
   }
+  
+  .home-page {
+    h1 {
+      font-size: 24px;
+    }
+    
+    .banner {
+      p {
+        font-size: 12px;
+      }
+    }
+  }
 }
 
 @media all and (max-width: 768px) {

@@ -6,7 +6,12 @@
   .page-header .nav-region {
     position: relative; }
     .page-header .nav-region .block-menu .content > ul.menu {
-      text-align: center; } }
+      text-align: center; }
+
+  .home-page h1 {
+    font-size: 24px; }
+  .home-page .banner p {
+    font-size: 12px; } }
 @media all and (max-width: 768px) {
   .page-header .nav-region .block-menu .content > ul.menu > li {
     font-size: 12px; } }
