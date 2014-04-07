@@ -24,7 +24,14 @@
   body.single-node.basic-page .burr-flipped-content {
     width: 60%; }
   body.single-node.basic-page .burr-flipped-sidebar {
-    width: 40%; } }
+    width: 40%; }
+
+  .staff-list li {
+    width: 50%; }
+    .staff-list li.col-1 {
+      clear: none; }
+    .staff-list li.two-col-col-1 {
+      clear: left; } }
 @media all and (max-width: 630px) {
   .page-header .nav-region .block-menu .content > ul.menu > li {
     font-size: 11px; } }
@@ -35,7 +42,11 @@
     .page-header .nav-region .block-menu .content > ul.menu > li:first-child {
       padding-left: 0;
       border-left: none;
-      margin-left: 0; } }
+      margin-left: 0; }
+
+  .staff-list li.col-1, .staff-list li.col-2, .staff-list li.col-3 {
+    float: none;
+    width: 100%; } }
 @media all and (max-width: 530px) {
   .page-header .nav-region {
     float: right;
