@@ -34,9 +34,9 @@ function avida_preprocess_page(&$vars) {
 function avida_preprocess_views_view_list(&$vars) {
   if ($vars['view']->name != 'staff') return;
   
-  $counter = 1;
+  $counter = $two_col_counter = 1;
   foreach ($vars['classes_array'] as $index => &$class) {
-    $add_class = ' col-' . $counter;
+    $add_class = ' col-' . $counter . ' two-col-col-' . $two_col_counter;
     $class = trim($class . $add_class);
     
     if ($counter == 3) {
@@ -45,6 +45,8 @@ function avida_preprocess_views_view_list(&$vars) {
     else {
       $counter++;
     }
+    
+    $two_col_counter = $two_col_counter == 1 ? 2 : 1;
   }
 }
 
