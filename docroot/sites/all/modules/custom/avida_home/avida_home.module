@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the AVIDA: Homepage feature.
+ */
+
+include_once 'avida_home.features.inc';

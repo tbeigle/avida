@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the AVIDA: Coming Soon feature.
+ */
+
+include_once 'avida_coming_soon.features.inc';

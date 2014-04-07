@@ -1,0 +1,17 @@
+name = AVIDA: Coming Soon
+core = 7.x
+package = AVIDA
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = fe_block
+features[context][] = coming_soon
+features[ctools][] = context:context:3
+features[fe_block_boxes][] = changing_lives
+features[fe_block_boxes][] = coming_soon_contact_info
+features[fe_block_boxes][] = coming_soon_left_box
+features[fe_block_boxes][] = coming_soon_right_box
+features[fe_block_settings][] = block-changing_lives
+features[fe_block_settings][] = block-coming_soon_contact_info
+features[fe_block_settings][] = block-coming_soon_left_box
+features[fe_block_settings][] = block-coming_soon_right_box
+features[features_api][] = api:2

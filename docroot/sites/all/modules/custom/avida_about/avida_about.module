@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the AVIDA: About Us feature.
+ */
+
+include_once 'avida_about.features.inc';
