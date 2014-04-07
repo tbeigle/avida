@@ -216,8 +216,9 @@ body.single-node.basic-page .burr-flipped-sidebar {
       padding: 0;
       margin: 0;
       text-align: right;
-      font: 14px/1.4285 "Chivo", arial, helvetica, sans-serif;
-      color: #767676; }
+      color: #767676;
+      font-size: 0;
+      line-height: 0; }
       .page-header .nav-region .block-menu .content > ul.menu a:link, .page-header .nav-region .block-menu .content > ul.menu a:visited, .page-header .nav-region .block-menu .content > ul.menu a:hover, .page-header .nav-region .block-menu .content > ul.menu a:active, .page-header .nav-region .block-menu .content > ul.menu a:focus {
         color: #767676; }
       .page-header .nav-region .block-menu .content > ul.menu > li {
@@ -225,11 +226,14 @@ body.single-node.basic-page .burr-flipped-sidebar {
         display: inline-block;
         background: url("../../images/bg-nav-link-leaf.png") 0 0 no-repeat;
         padding: 0 0 0 20px;
-        margin: 0 0 0 10px; }
+        margin: 0 0 0 10px;
+        font: 14px/1.4285 "Chivo", arial, helvetica, sans-serif; }
         .page-header .nav-region .block-menu .content > ul.menu > li:first-child {
           background: none;
           padding: 0;
           margin: 0; }
+        .page-header .nav-region .block-menu .content > ul.menu > li .menu {
+          display: none; }
 
 .with-right-sidebar #content-wrapper {
   width: 75.2825%;

@@ -297,8 +297,8 @@ body.single-node {
           padding: 0;
           margin: 0;
           text-align: right;
-          font: 14px/1.4285 $fontFamSansSpec;
           color: $colFontNavLink;
+          @include noText();
           
           a {
             @include linkAllStates(color, $colFontNavLink);
@@ -310,11 +310,16 @@ body.single-node {
             background: url('../../images/bg-nav-link-leaf.png') 0 0 no-repeat;
             padding: 0 0 0 20px;
             margin: 0 0 0 10px;
+            font: 14px/1.4285 $fontFamSansSpec;
             
             &:first-child {
               background: none;
               padding: 0;
               margin: 0;
+            }
+            
+            .menu {
+              display: none;
             }
           }
         }

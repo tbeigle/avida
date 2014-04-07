@@ -134,3 +134,93 @@
     }
   }
 }
+
+@media screen and (max-width: 480px) {
+  body.landing-coming-soon {
+    width: 100%;
+    margin: 0;
+    font-size: 1em;
+  }
+  
+  .landing-coming-soon {
+    h1 {
+      font-size: 2em;
+    }
+    
+    .body-emph {
+      font-size: 1.125em;
+    }
+    
+    .sutro-column-content {
+      background: none;
+      
+      .sutro-column1 {
+        margin-bottom: 20px;
+        
+        .sutro-column-inner {
+          border-right: none;
+        }
+      }
+    }
+  }
+  
+  .lp-changing-lives {
+    h2 {
+      //font-size: 1em;
+    }
+  }
+  
+  .coming-soon-boxes {
+    h2 {
+      font-size: 1em;
+    }
+  }
+  
+  .horizontal.with-bullets {
+    li {
+      //font-size: 1em;
+    }
+  }
+  
+  .coming-soon-contact-info {
+    h2 {
+      font-size: 1em;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body.landing-coming-soon {
+    font-size: 0.9em;
+    
+    h1 {
+      font-size: 1.5em;
+    }
+    
+    .body-emph {
+      font-size: 1em;
+    }
+  }
+  
+  .lp-changing-lives {
+    h2 {
+      font-size: 12px;
+    }
+    
+    .horizontal.with-bullets {
+      li {
+        font-size: 12px;
+      }
+    }
+  }
+  
+  .coming-soon-boxes {
+    h2 {
+      padding: 10px;
+    }
+  }
+  
+  .coming-soon-contact-info {
+    margin-top: 40px;
+  }
+}

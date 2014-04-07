@@ -1,93 +1,240 @@
 @import "mixins";
 
-@media screen and (max-width: 480px) {
-  body {
-    width: 100%;
-    margin: 0;
-    font-size: 1em;
-  }
-  
-  .landing-coming-soon {
-    h1 {
-      font-size: 2em;
+@media all and (max-width: 910px) {
+  .page-header {
+    .logo-header {
+      clear: both;
+      width: $wdthLogoHdrMax;
+      margin-bottom: 10px;
     }
     
-    .body-emph {
-      font-size: 1.125em;
-    }
-    
-    .sutro-column-content {
-      background: none;
+    .nav-region {
+      position: relative;
       
-      .sutro-column1 {
-        margin-bottom: 20px;
-        
-        .sutro-column-inner {
-          border-right: none;
+      .block-menu {
+        .content {
+          &> ul.menu {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .page-header {
+    .nav-region {
+      .block-menu {
+        .content {
+          &> ul.menu {
+            &> li {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 690px) {
+  .page-header {
+    .nav-region {
+      .block-menu {
+        .content {
+          &> ul.menu {
+            &> li {
+              background: none;
+              padding-left: 1.4492%;
+              border-left: 1px solid $colLogoGrn;
+              margin-left: 1.4492%;
+              
+              &:first-child {
+                padding-left: 0;
+                border-left: none;
+                margin-left: 0;
+              }
+            }
+          }
         }
       }
     }
   }
   
-  .lp-changing-lives {
-    h2 {
-      //font-size: 1em;
+  body.single-node.basic-page {
+    .burr-flipped-content {
+      width: 60%;
     }
-  }
-  
-  .coming-soon-boxes {
-    h2 {
-      font-size: 1em;
-    }
-  }
-  
-  .horizontal.with-bullets {
-    li {
-      //font-size: 1em;
-    }
-  }
-  
-  .coming-soon-contact-info {
-    h2 {
-      font-size: 1em;
+    .burr-flipped-sidebar {
+      width: 40%;
     }
   }
 }
 
-@media screen and (max-width: 320px) {
-  body {
-    font-size: 0.9em;
-  }
-  
-  .landing-coming-soon {
-    h1 {
-      font-size: 1.5em;
-    }
-    
-    .body-emph {
-      font-size: 1em;
-    }
-  }
-  
-  .lp-changing-lives {
-    h2 {
-      font-size: 12px;
-    }
-    
-    .horizontal.with-bullets {
-      li {
-        font-size: 12px;
+@media all and (max-width: 630px) {
+  .page-header {
+    .nav-region {
+      .block-menu {
+        .content {
+          &> ul.menu {
+            &> li {
+              font-size: 11px;
+            }
+          }
+        }
       }
     }
   }
-  
-  .coming-soon-boxes {
-    h2 {
-      padding: 10px;
+}
+
+@media all and (max-width: 580px) {
+  .page-header {
+    .nav-region {
+      .block-menu {
+        .content {
+          &> ul.menu {
+            &> li {
+              padding-left: 0.862%;
+              margin-left: 0.862%;
+              
+              &:first-child {
+                padding-left: 0;
+                border-left: none;
+                margin-left: 0;
+              }
+            }
+          }
+        }
+      }
     }
   }
-  
-  .coming-soon-contact-info {
-    margin-top: 40px;
+}
+
+@media all and (max-width: 530px) {
+  .page-header {
+    .nav-region {
+      float: right;
+      width: 50%;
+      margin-top: 56px;
+      
+      .block-menu {
+        &.mobile-title {
+          .block-title {
+            cursor: pointer;
+            display: inline-block;
+            margin: 0 0 5px;
+            
+            text: {
+              align: left;
+              transform: uppercase;
+            }
+            
+            color: $colLogoGrn;
+            font: 14px/1.1 $fontFamSansSpec;
+            
+            &:after {
+              position: relative;
+              left: 5px;
+              top: 2px;
+              content: '.';
+              float: right;
+              width: 0;
+              height: 0;
+              @include noText();
+              
+              border: {
+                top: 10px solid $colLogoGrn;
+                right: 5px solid transparent;
+                left: 5px solid transparent;
+              }
+            }
+          }
+        }
+        
+        .content {
+          &> ul.menu {
+            display: none;
+            text-align: left;
+            
+            &> li,
+            &> li:first-child {
+              display: block;
+              width: 100%;
+              padding: 0;
+              border: {
+                left: none;
+                bottom: 1px solid $colLogoGrn;
+              }
+              
+              margin: 0;
+              font-size: 14px;
+              text-transform: uppercase;
+              
+              &:first-child {
+                border-top: 1px solid $colLogoGrn;
+              }
+            }
+            
+            a {
+              @include linkAllStates(color, $colFontBlck);
+              
+              &:link,
+              &:visited {
+                display: block;
+                padding: 10px 20px;
+                background: $colLrnMrBG;
+              }
+              
+              &:hover,
+              &:active,
+              &:focus {
+                background: #fff;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+        
+        &.mobile-expanded {
+          &.mobile-title {
+            .block-title {
+              &:after {
+                position: relative;
+                left: 5px;
+                top: 2px;
+                content: '.';
+                float: right;
+                width: 0;
+                height: 0;
+                @include noText();
+                
+                border: {
+                  top: none;
+                  right: 5px solid transparent;
+                  left: 5px solid transparent;
+                  bottom: 10px solid $colLogoGrn;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  body.single-node.basic-page {
+    .burr-flipped-content,
+    .burr-flipped-sidebar {
+      float: none;
+      width: 100%;
+    }
+    
+    .burr-flipped-sidebar {
+      padding-top: 20px;
+      background: url('../../images/border-with-bulb-600x8.png') right top no-repeat;
+    }
   }
 }
