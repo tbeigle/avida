@@ -44,7 +44,7 @@ a {
   background: url('../../images/bg-lines.jpg') 0 0 repeat;
   
   &> .inner {
-    max-width: 964px;
+    max-width: $wdthWrapInner;
     padding: 28px 25px 40px;
     background: #fff;
     border: {
@@ -69,7 +69,7 @@ a {
 
 .row {
   width: 100%;
-  max-width: 1020px;
+  max-width: $wdthRowMax;
   margin: auto;
 }
 
@@ -144,11 +144,13 @@ a {
     }
   }
 }
+
 .more-box,
 .h2-short-line  h2 {
   padding: 0 0 28px;
   background: url('../../images/border-with-bulb-130x8.png') right bottom no-repeat;
 }
+
 .more-box {
   .pane-content,
   p {
@@ -236,7 +238,7 @@ body.single-node {
     
     .brenham-column-content {
       position: relative;
-      padding-left: 74px;
+      padding-left: 72px;
     }
     
     .brenham-sidebar {
@@ -269,7 +271,7 @@ body.single-node {
   
   .logo-header {
     width: 15.114%;
-    max-width: 146px;
+    max-width: $wdthLogoHdrMax;
   }
   
   .header-logo {
@@ -302,7 +304,7 @@ body.single-node {
             @include linkAllStates(color, $colFontNavLink);
           }
           
-          .leaf {
+          &> li {
             list-style: none;
             display: inline-block;
             background: url('../../images/bg-nav-link-leaf.png') 0 0 no-repeat;
@@ -321,22 +323,23 @@ body.single-node {
   }
 }
 
+// Sidebar
 .with-right-sidebar {
   #content-wrapper {
     width: 75.2825%;
-    max-width: 674px;
+    max-width: $wdthCntntWthSBMax;
   }
   
   #page-sidebar-second {
     width: 22.5165%;
-    max-width: 204px;
+    max-width: $wdthSBMax;
   }
 }
 
 // Footer
 #footer {
   width: 100%;
-  max-width: 964px;
+  max-width: $wdthWrapInner;
   padding: 25px 60px;
   margin: auto;
   
@@ -380,9 +383,13 @@ body.single-node {
     }
   }
   
-  .staff-photo {
+  .staff-photo,
+  .staff-about {
     width: 100%;
-    max-width: 160px;
+    max-width: $wdthStfPhoto;
+  }
+  
+  .staff-photo {
     border: 5px solid $colLogoLght;
     @include vendorize(border-radius, 50%);
     overflow: hidden;
@@ -421,8 +428,6 @@ body.single-node {
   }
   
   .staff-about {
-    width: 100%;
-    max-width: 160px;
     margin: auto;
     
     p {

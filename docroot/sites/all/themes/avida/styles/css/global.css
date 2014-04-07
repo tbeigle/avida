@@ -179,7 +179,7 @@ body.single-node.basic-page .burr-flipped-sidebar {
     color: #008e91; }
 .views-list.events-list .brenham-column-content {
   position: relative;
-  padding-left: 74px; }
+  padding-left: 72px; }
 .views-list.events-list .brenham-sidebar {
   position: absolute;
   left: 0;
@@ -220,13 +220,13 @@ body.single-node.basic-page .burr-flipped-sidebar {
       color: #767676; }
       .page-header .nav-region .block-menu .content > ul.menu a:link, .page-header .nav-region .block-menu .content > ul.menu a:visited, .page-header .nav-region .block-menu .content > ul.menu a:hover, .page-header .nav-region .block-menu .content > ul.menu a:active, .page-header .nav-region .block-menu .content > ul.menu a:focus {
         color: #767676; }
-      .page-header .nav-region .block-menu .content > ul.menu .leaf {
+      .page-header .nav-region .block-menu .content > ul.menu > li {
         list-style: none;
         display: inline-block;
         background: url("../../images/bg-nav-link-leaf.png") 0 0 no-repeat;
         padding: 0 0 0 20px;
         margin: 0 0 0 10px; }
-        .page-header .nav-region .block-menu .content > ul.menu .leaf:first-child {
+        .page-header .nav-region .block-menu .content > ul.menu > li:first-child {
           background: none;
           padding: 0;
           margin: 0; }
@@ -268,9 +268,11 @@ body.single-node.basic-page .burr-flipped-sidebar {
     margin-right: 0; }
   .staff-list li.col-1 {
     clear: left; }
-.staff-list .staff-photo {
+.staff-list .staff-photo,
+.staff-list .staff-about {
   width: 100%;
-  max-width: 160px;
+  max-width: 160px; }
+.staff-list .staff-photo {
   border: 5px solid #008e91;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -296,8 +298,6 @@ body.single-node.basic-page .burr-flipped-sidebar {
   letter-spacing: 1px;
   color: #008e91; }
 .staff-list .staff-about {
-  width: 100%;
-  max-width: 160px;
   margin: auto; }
   .staff-list .staff-about p {
     margin: 1em 0 0; }
