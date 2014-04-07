@@ -29,6 +29,26 @@ function avida_preprocess_page(&$vars) {
 }
 
 /**
+ * Implements template_preprocess_views_view_fields()
+ */
+function avida_preprocess_views_view_list(&$vars) {
+  if ($vars['view']->name != 'staff') return;
+  
+  $counter = 1;
+  foreach ($vars['classes_array'] as $index => &$class) {
+    $add_class = ' col-' . $counter;
+    $class = trim($class . $add_class);
+    
+    if ($counter == 3) {
+      $counter = 1;
+    }
+    else {
+      $counter++;
+    }
+  }
+}
+
+/**
  * Adds apple shortcut icons to the HTML head
  */
 function _avida_apple_touch_icons() {

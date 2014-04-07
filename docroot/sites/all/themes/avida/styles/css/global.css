@@ -69,6 +69,9 @@ a {
 .mobile-title .block-title {
   display: none; }
 
+.panel-flexible .panel-separator {
+  display: none; }
+
 .horizontal.with-bullets {
   padding: 0;
   margin: 0;
@@ -162,6 +165,8 @@ body.single-node.basic-page .burr-flipped-sidebar {
     list-style: none;
     padding: 36px 0 0 0;
     margin: 0; }
+    .views-list.events-list ul.events li:first-child {
+      padding-top: 0; }
 .views-list.events-list .brenham-container {
   margin: 0; }
 .views-list.events-list .event-title {
@@ -211,7 +216,7 @@ body.single-node.basic-page .burr-flipped-sidebar {
       padding: 0;
       margin: 0;
       text-align: right;
-      font: 14px/20px "Chivo", arial, helvetica, sans-serif;
+      font: 14px/1.4285 "Chivo", arial, helvetica, sans-serif;
       color: #767676; }
       .page-header .nav-region .block-menu .content > ul.menu a:link, .page-header .nav-region .block-menu .content > ul.menu a:visited, .page-header .nav-region .block-menu .content > ul.menu a:hover, .page-header .nav-region .block-menu .content > ul.menu a:active, .page-header .nav-region .block-menu .content > ul.menu a:focus {
         color: #767676; }
@@ -248,3 +253,53 @@ body.single-node.basic-page .burr-flipped-sidebar {
 .copyright-footer {
   font: 11px/1.64 'Chivo', Arial, Helvetica, sans-serif;
   color: #fff; }
+
+.staff-list ul {
+  padding: 0;
+  margin: 0; }
+.staff-list li {
+  list-style: none;
+  float: left;
+  width: 33.3333%;
+  padding: 0;
+  margin: 0 0 64px;
+  text-align: center; }
+  .staff-list li.col-3 {
+    margin-right: 0; }
+  .staff-list li.col-1 {
+    clear: left; }
+.staff-list .staff-photo {
+  width: 100%;
+  max-width: 160px;
+  border: 5px solid #008e91;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  font-size: 0;
+  line-height: 0; }
+.staff-list .staff-position,
+.staff-list .staff-name {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-family: "Chivo", arial, helvetica, sans-serif; }
+.staff-list .staff-position {
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #333333; }
+.staff-list .staff-name {
+  margin-bottom: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #008e91; }
+.staff-list .staff-about {
+  width: 100%;
+  max-width: 160px;
+  margin: auto; }
+  .staff-list .staff-about p {
+    margin: 1em 0 0; }
+    .staff-list .staff-about p:first-child {
+      margin: 0; }

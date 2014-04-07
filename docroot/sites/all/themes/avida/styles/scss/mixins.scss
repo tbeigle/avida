@@ -64,3 +64,8 @@ $fontFamSansSpec: 'Chivo', arial, helvetica, sans-serif;
     #{$property}: $value;
   }
 }
+
+@mixin noText() {
+  font-size: 0;
+  line-height: 0;
+}

@@ -84,6 +84,10 @@ a {
   }
 }
 
+.panel-flexible .panel-separator {
+  display: none;
+}
+
 .horizontal.with-bullets {
   padding: 0;
   margin: 0;
@@ -207,6 +211,10 @@ body.single-node {
         list-style: none;
         padding: 36px 0 0 0;
         margin: 0;
+        
+        &:first-child {
+          padding-top: 0;
+        }
       }
     }
     
@@ -287,7 +295,7 @@ body.single-node {
           padding: 0;
           margin: 0;
           text-align: right;
-          font: 14px/20px $fontFamSansSpec;
+          font: 14px/1.4285 $fontFamSansSpec;
           color: $colFontNavLink;
           
           a {
@@ -345,4 +353,84 @@ body.single-node {
 .copyright-footer {
   font: 11px/1.64 'Chivo', Arial, Helvetica, sans-serif;
   color: #fff;
+}
+
+// Staff page
+.staff-list {
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    list-style: none;
+    float: left;
+    width: 33.3333%;
+    padding: 0;
+    margin: 0 0 64px;
+    text-align: center;
+    
+    &.col-3 {
+      //clear: right;
+      margin-right: 0;
+    }
+    
+    &.col-1 {
+      clear: left;
+    }
+  }
+  
+  .staff-photo {
+    width: 100%;
+    max-width: 160px;
+    border: 5px solid $colLogoLght;
+    @include vendorize(border-radius, 50%);
+    overflow: hidden;
+    margin: 0 auto 20px;
+    @include noText();
+  }
+  
+  .staff-position,
+  .staff-name {
+    margin: 0 0 12px;
+    
+    font: {
+      size: 14px;
+      family: $fontFamSansSpec;
+    }
+  }
+  
+  .staff-position {
+    font: {
+      weight: normal;
+    }
+    
+    text-transform: uppercase;
+    color: $colFontDrk;
+  }
+  
+  .staff-name {
+    margin-bottom: 13px;
+    
+    font: {
+      weight: bold;
+    }
+    
+    letter-spacing: 1px;
+    color: $colLogoLght;
+  }
+  
+  .staff-about {
+    width: 100%;
+    max-width: 160px;
+    margin: auto;
+    
+    p {
+      margin: 1em 0 0;
+      
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
 }

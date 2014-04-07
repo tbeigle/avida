@@ -1,0 +1,107 @@
+form {
+  width: 100%;
+  max-width: 500px;
+  padding-top: 20px;
+  background: url("../../images/border-with-bulb-600x8.png") right top no-repeat;
+  margin: auto; }
+
+.form-item {
+  margin: 0 0 1.25em; }
+
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+label,
+.compact-form-label,
+.webform-component label {
+  display: block;
+  padding: 5px 10px;
+  margin: 0;
+  font: 14px/1.4285 "Chivo", arial, helvetica, sans-serif; }
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+label,
+.compact-form-label,
+.webform-component label {
+  height: 30px; }
+
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"] {
+  width: 100%;
+  border: 1px solid #767676;
+  color: #292418;
+  -webkit-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.25);
+  -o-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.25); }
+  textarea:focus, textarea:active,
+  input[type="text"]:focus,
+  input[type="text"]:active,
+  input[type="email"]:focus,
+  input[type="email"]:active,
+  input[type="password"]:focus,
+  input[type="password"]:active,
+  input[type="search"]:focus,
+  input[type="search"]:active {
+    outline: none;
+    border-color: #292418;
+    -webkit-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.75);
+    -ms-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.75);
+    -o-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.75); }
+
+textarea {
+  resize: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none; }
+
+label,
+.compact-form-label,
+.webform-component label {
+  padding-left: 6px;
+  color: #767676; }
+
+.form-actions {
+  text-align: center;
+  padding-bottom: 20px;
+  background: url("../../images/border-with-bulb-600x8.png") right bottom no-repeat; }
+
+input[type="submit"],
+.form-submit,
+.button,
+button {
+  display: inline-block;
+  height: 36px;
+  padding: 0 16px;
+  background: #f1f1e9;
+  border: 1px solid #d0d0d0;
+  margin: 0;
+  font: 12px/1.5 "Chivo", arial, helvetica, sans-serif;
+  color: #292418;
+  text-decoration: underline;
+  text-transform: lowercase;
+  cursor: pointer; }
+  input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus,
+  .form-submit:hover,
+  .form-submit:active,
+  .form-submit:focus,
+  .button:hover,
+  .button:active,
+  .button:focus,
+  button:hover,
+  button:active,
+  button:focus {
+    text-decoration: none; }

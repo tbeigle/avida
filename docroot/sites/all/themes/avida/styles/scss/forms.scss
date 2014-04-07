@@ -1,1 +1,94 @@
 @import "mixins";
+
+form {
+  width: 100%;
+  max-width: 500px;
+  padding-top: 20px;
+  background: url('../../images/border-with-bulb-600x8.png') right top no-repeat;
+  margin: auto;
+}
+
+.form-item {
+  margin: 0 0 1.25em;
+}
+
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+label,
+.compact-form-label,
+.webform-component label {
+  display: block;
+  padding: 5px 10px;
+  margin: 0;
+  font: 14px/1.4285 $fontFamSansSpec;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+label,
+.compact-form-label,
+.webform-component label {
+  height: 30px;
+}
+
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"] {
+  width: 100%;
+  border: 1px solid $colFontNavLink;
+  color: $colFontBlck;
+  @include vendorize(box-shadow, inset 0px 0px 1px 1px rgba(0,0,0,0.25));
+  
+  &:focus,
+  &:active {
+    outline: none;
+    border-color: $colFontBlck;
+    @include vendorize(box-shadow, inset 0px 0px 1px 1px rgba(0,0,0,0.75));
+  }
+}
+
+textarea {
+  resize: none;
+  @include vendorize(appearance, none);
+}
+
+label,
+.compact-form-label,
+.webform-component label {
+  padding-left: 6px;
+  color: $colFontNavLink;
+}
+
+.form-actions {
+  text-align: center;
+  padding-bottom: 20px;
+  background: url('../../images/border-with-bulb-600x8.png') right bottom no-repeat;
+}
+
+input[type="submit"],
+.form-submit,
+.button,
+button {
+  display: inline-block;
+  height: 36px;
+  padding: 0 16px;
+  background: $colLrnMrBG;
+  border: 1px solid $colLrnMrBrdr;
+  margin: 0;
+  font: 12px/1.5 $fontFamSansSpec;
+  color: $colFontBlck;
+  text: {
+    decoration: underline;
+    transform: lowercase;
+  }
+  
+  @include hoverActiveFocus(text-decoration, none);
+  cursor: pointer;
+}
