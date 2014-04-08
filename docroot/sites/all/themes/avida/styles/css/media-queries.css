@@ -14,7 +14,12 @@
     font-size: 12px; } }
 @media all and (max-width: 768px) {
   .page-header .nav-region .block-menu .content > ul.menu > li {
-    font-size: 12px; } }
+    font-size: 12px; }
+
+  .home-page h1 {
+    font-size: 18px; }
+  .home-page .banner p {
+    padding-left: 0; } }
 @media all and (max-width: 690px) {
   .page-header .nav-region .block-menu .content > ul.menu > li {
     background: none;
@@ -36,10 +41,39 @@
     .staff-list li.col-1 {
       clear: none; }
     .staff-list li.two-col-col-1 {
-      clear: left; } }
+      clear: left; }
+
+  .home-3-col-blocks h2,
+  .home-3-col-blocks .pane-content h2 {
+    font-size: 18px; } }
+@media all and (max-width: 660px) {
+  .home-page .banner {
+    padding-left: 320px; } }
 @media all and (max-width: 630px) {
   .page-header .nav-region .block-menu .content > ul.menu > li {
-    font-size: 11px; } }
+    font-size: 11px; }
+
+  .avida-132.bottom-col.col-1, .avida-132.bottom-col.col-2 {
+    float: none;
+    width: 100%;
+    padding: 0 30px; }
+  .avida-132.bottom-col.col-1 {
+    text-align: left; }
+  .avida-132.bottom-col .more-box,
+  .avida-132.bottom-col .h2-short-line h2 {
+    background-position: left bottom; } }
+@media all and (max-width: 590px) {
+  .home-page .banner {
+    height: auto;
+    padding: 20px;
+    background-image: none;
+    text-align: center; }
+    .home-page .banner .more-box p {
+      margin: 0; }
+  .home-page h1 {
+    float: none;
+    background-image: url("../../images/border-with-bulb-600x8.png");
+    font-size: 24px; } }
 @media all and (max-width: 580px) {
   .page-header .nav-region .block-menu .content > ul.menu > li {
     padding-left: 0.862%;
@@ -51,7 +85,14 @@
 
   .staff-list li.col-1, .staff-list li.col-2, .staff-list li.col-3 {
     float: none;
-    width: 100%; } }
+    width: 100%; }
+
+  .home-3-col-blocks h2,
+  .home-3-col-blocks .pane-content h2 {
+    font-size: 14px; }
+  .home-3-col-blocks .content a,
+  .home-3-col-blocks .pane-content a {
+    font-size: 12px; } }
 @media all and (max-width: 530px) {
   .page-header .nav-region {
     float: right;
@@ -122,4 +163,12 @@
     width: 100%; }
   body.single-node.basic-page .burr-flipped-sidebar {
     padding-top: 20px;
-    background: url("../../images/border-with-bulb-600x8.png") right top no-repeat; } }
+    background: url("../../images/border-with-bulb-600x8.png") right top no-repeat; }
+
+  .avida-132.middle-col.col-1, .avida-132.middle-col.col-2, .avida-132.middle-col.col-3 {
+    float: none;
+    width: 100%;
+    padding: 0; }
+
+  .home-3-col-blocks.getting-started, .home-3-col-blocks.volunteer, .home-3-col-blocks.clinical-trials {
+    margin: 20px auto 0; } }
