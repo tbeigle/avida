@@ -30,7 +30,7 @@ scripts[] = scripts/js/avida.js
 
 ; Settings
 settings[show_breadcrumb] = 1
-settings[site_footer] = AVIDA Inc. | <a href="#">Contact Us</a>
+settings[site_footer] = AVIDA Inc. | <a href="/contact-us">Contact Us</a>
 
 ; Stylesheets
 stylesheets[all][] = styles/css/global.css
