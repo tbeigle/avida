@@ -21,7 +21,9 @@
   // Mobile JS
   Drupal.behaviors.avidaMobile = {
     attach: function(context, settings) {
-      var dur_mobile_expand = 200,
+      var window_width = $(window).width(),
+          width_cutoff = 400,
+          dur_mobile_expand = 200,
           class_mobile_expanded = 'mobile-expanded';
       
       // Mobile navigation
@@ -36,6 +38,15 @@
           return false;
         });
       });
+      
+      // Footer quick links
+      $('.footer-nav .content > .menu > li').addClass('top-level');
+      $('.footer-nav .content > .menu > li:first-child').removeClass('top-level').addClass('top-level-first').children('.menu').addClass('top-level');
+      if (window_width <= width_cutoff) {
+        $('.footer-nav .top-level-first').css({'cursor': 'pointer'}).click(function() {
+          $('.footer-nav .top-level').slideToggle(dur_mobile_expand);
+        });
+      }
     }
   }
 })(jQuery);
