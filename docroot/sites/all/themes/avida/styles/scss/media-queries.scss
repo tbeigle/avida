@@ -111,6 +111,21 @@
   .home-3-col-blocks .pane-content h2 {
     font-size: 18px;
   }
+  
+  // Footer
+  #footer {
+    padding: {
+      left: 30px;
+      right: 30px;
+    }
+  }
+  
+  .footer-column.left {
+    float: none;
+    clear: both;
+    width: 100%;
+    margin-bottom: 25px;
+  }
 }
 
 @media all and (max-width: 660px) {
@@ -364,6 +379,141 @@
     &.volunteer,
     &.clinical-trials {
       margin: 20px auto 0;
+    }
+  }
+  
+  // Single event page
+  .page-single-event {
+    .bryant-sidebar {
+      display: none;
+    }
+  }
+  
+  // Events page
+  .event-calendar-page {
+    .views-list.events-list {
+      .event-title {
+      }
+    }
+    
+    ul.events {
+      li {
+        .left {
+          display: none;
+        }
+        
+        .right {
+          float: none;
+          width: 100%;
+        }
+      }
+    }
+    
+    .event-date {
+    }
+    
+    .field-label {
+    }
+  }
+  
+  // Footer
+  .footer-nav {
+    .content {
+      &> .menu {
+        &> li {
+          &> a,
+          &> .no-link {
+            font-size: 14px;
+            line-height: 12px;
+          }
+          
+          li {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 400px) {
+  // Footer
+  .footer-column.left {
+    float: left;
+    width: 50%;
+  }
+  
+  .footer-nav {
+    .content {
+      display: block;
+      
+      &> .menu {
+        display: block;
+        
+        .top-level {
+          display: none;
+        }
+        
+        &> li {
+          display: block;
+          width: 100%;
+          border-left: none;
+          padding: 10px 10px 6px;
+          border-top: 2px solid #fff;
+          
+          &:first-child {
+            display: block;
+            padding-top: 0;
+            border-top: none;
+          }
+          
+          &> a,
+          &> .nolink {
+            max-width: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 380px) {
+  // Footer
+  .footer-column.left {
+    float: none;
+    clear: both;
+    width: 100%;
+  }
+  
+  .footer-nav {
+    .content {
+      display: block;
+      
+      &> .menu {
+        display: block;
+        
+        .top-level {
+          display: none;
+        }
+        
+        &> li {
+          display: block;
+          width: 100%;
+          border-left: none;
+          padding: 10px 10px 6px;
+          border-top: 2px solid #fff;
+          
+          &:first-child {
+            display: block;
+            padding-top: 0;
+            border-top: none;
+          }
+          
+          &> a,
+          &> .nolink {
+            max-width: none;
+          }
+        }
+      }
     }
   }
 }

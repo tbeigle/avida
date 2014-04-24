@@ -254,6 +254,43 @@ body.single-node.basic-page .burr-flipped-sidebar {
   #footer .copyright-footer a:hover, #footer .copyright-footer a:active, #footer .copyright-footer a:focus {
     text-decoration: none; }
 
+.footer-column.left {
+  width: 71%;
+  max-width: 600px; }
+
+.footer-nav {
+  padding-top: 4px; }
+  .footer-nav .menu {
+    padding: 0;
+    margin: 0; }
+  .footer-nav .content {
+    display: table;
+    width: 100%; }
+    .footer-nav .content li {
+      list-style: none;
+      display: block;
+      padding: 0;
+      margin: 0; }
+    .footer-nav .content > .menu {
+      display: table-row; }
+      .footer-nav .content > .menu > li {
+        display: table-cell;
+        width: 25%;
+        padding-left: 6px;
+        border-left: 2px solid #fff; }
+        .footer-nav .content > .menu > li > a, .footer-nav .content > .menu > li > .nolink {
+          display: block;
+          max-width: 90px;
+          margin-bottom: 6px;
+          color: #fff;
+          font: bold 16px/14px "Chivo", arial, helvetica, sans-serif;
+          text-transform: uppercase; }
+          .footer-nav .content > .menu > li > a:link, .footer-nav .content > .menu > li > a:visited, .footer-nav .content > .menu > li > a:hover, .footer-nav .content > .menu > li > a:active, .footer-nav .content > .menu > li > a:focus, .footer-nav .content > .menu > li > .nolink:link, .footer-nav .content > .menu > li > .nolink:visited, .footer-nav .content > .menu > li > .nolink:hover, .footer-nav .content > .menu > li > .nolink:active, .footer-nav .content > .menu > li > .nolink:focus {
+            color: white; }
+        .footer-nav .content > .menu > li li {
+          margin-top: 5px;
+          font: 11px/1.1818 "Chivo", arial, helvetica, sans-serif; }
+
 .copyright-footer {
   font: 11px/1.64 'Chivo', Arial, Helvetica, sans-serif;
   color: #fff; }
@@ -307,3 +344,34 @@ body.single-node.basic-page .burr-flipped-sidebar {
     margin: 1em 0 0; }
     .staff-list .staff-about p:first-child {
       margin: 0; }
+
+.event-calendar-page .views-list.events-list .event-title {
+  margin-bottom: 0.5em;
+  font-size: 18px; }
+.event-calendar-page ul.events li {
+  padding-top: 0;
+  overflow: hidden; }
+  .event-calendar-page ul.events li .left {
+    float: left;
+    width: 23.404%;
+    max-width: 100px; }
+  .event-calendar-page ul.events li .right {
+    float: left;
+    width: 76.596%; }
+.event-calendar-page .event-date {
+  margin-bottom: 1em; }
+.event-calendar-page .field-label {
+  font-weight: bold;
+  font-family: "Chivo", arial, helvetica, sans-serif;
+  font-size: 14px;
+  color: #292418; }
+
+.page-single-event .bryant-sidebar {
+  max-width: 100px; }
+.page-single-event .event-date {
+  margin-bottom: 1em; }
+.page-single-event .field-label {
+  font-weight: bold;
+  font-family: "Chivo", arial, helvetica, sans-serif;
+  font-size: 14px;
+  color: #292418; }

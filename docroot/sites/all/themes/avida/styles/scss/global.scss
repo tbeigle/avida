@@ -358,6 +358,59 @@ body.single-node {
   }
 }
 
+.footer-column.left {
+  width: 71%;
+  max-width: 600px;
+}
+
+.footer-nav {
+  padding-top: 4px;
+  
+  .menu {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .content {
+    display: table;
+    width: 100%;
+    
+    li {
+      list-style: none;
+      display: block;
+      padding: 0;
+      margin: 0;
+    }
+    
+    &> .menu {
+      display: table-row;
+      
+      &> li {
+        display: table-cell;
+        width: 25%;
+        padding-left: 6px;
+        border-left: 2px solid #fff;
+        
+        &> a,
+        &> .nolink {
+          display: block;
+          max-width: 90px;
+          margin-bottom: 6px;
+          color: #fff;
+          @include linkAllStates(color, #fff);
+          font: bold 16px/14px $fontFamSansSpec;
+          text-transform: uppercase;
+        }
+        
+        li {
+          margin-top: 5px;
+          font: 11px/1.1818 $fontFamSansSpec;
+        }
+      }
+    }
+  }
+}
+
 .copyright-footer {
   font: 11px/1.64 'Chivo', Arial, Helvetica, sans-serif;
   color: #fff;
@@ -442,5 +495,66 @@ body.single-node {
         margin: 0;
       }
     }
+  }
+}
+
+// Events page
+.event-calendar-page {
+  .views-list.events-list {
+    .event-title {
+      margin-bottom: 0.5em;
+      font-size: 18px;
+    }
+  }
+  
+  ul.events {
+    li {
+      padding-top: 0;
+      overflow: hidden;
+      
+      .left {
+        float: left;
+        width: 23.404%;
+        max-width: 100px;
+      }
+      
+      .right {
+        float: left;
+        width: 76.596%;
+      }
+    }
+  }
+  
+  .event-date {
+    margin-bottom: 1em;
+  }
+  
+  .field-label {
+    font: {
+      weight: bold;
+      family: $fontFamSansSpec;
+      size: 14px;
+    }
+    
+    color: $colFontBlck;
+  }
+}
+
+// Single event page
+.page-single-event {
+  .bryant-sidebar {
+    max-width: 100px;
+  }
+  .event-date {
+    margin-bottom: 1em;
+  }
+  .field-label {
+    font: {
+      weight: bold;
+      family: $fontFamSansSpec;
+      size: 14px;
+    }
+    
+    color: $colFontBlck;
   }
 }

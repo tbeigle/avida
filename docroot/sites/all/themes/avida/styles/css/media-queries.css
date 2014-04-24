@@ -45,7 +45,17 @@
 
   .home-3-col-blocks h2,
   .home-3-col-blocks .pane-content h2 {
-    font-size: 18px; } }
+    font-size: 18px; }
+
+  #footer {
+    padding-left: 30px;
+    padding-right: 30px; }
+
+  .footer-column.left {
+    float: none;
+    clear: both;
+    width: 100%;
+    margin-bottom: 25px; } }
 @media all and (max-width: 660px) {
   .home-page .banner {
     padding-left: 320px; } }
@@ -171,4 +181,66 @@
     padding: 0; }
 
   .home-3-col-blocks.getting-started, .home-3-col-blocks.volunteer, .home-3-col-blocks.clinical-trials {
-    margin: 20px auto 0; } }
+    margin: 20px auto 0; }
+
+  .page-single-event .bryant-sidebar {
+    display: none; }
+
+  .event-calendar-page ul.events li .left {
+    display: none; }
+  .event-calendar-page ul.events li .right {
+    float: none;
+    width: 100%; }
+
+  .footer-nav .content > .menu > li > a, .footer-nav .content > .menu > li > .no-link {
+    font-size: 14px;
+    line-height: 12px; }
+  .footer-nav .content > .menu > li li {
+    margin-right: 10px; } }
+@media all and (max-width: 400px) {
+  .footer-column.left {
+    float: left;
+    width: 50%; }
+
+  .footer-nav .content {
+    display: block; }
+    .footer-nav .content > .menu {
+      display: block; }
+      .footer-nav .content > .menu .top-level {
+        display: none; }
+      .footer-nav .content > .menu > li {
+        display: block;
+        width: 100%;
+        border-left: none;
+        padding: 10px 10px 6px;
+        border-top: 2px solid #fff; }
+        .footer-nav .content > .menu > li:first-child {
+          display: block;
+          padding-top: 0;
+          border-top: none; }
+        .footer-nav .content > .menu > li > a, .footer-nav .content > .menu > li > .nolink {
+          max-width: none; } }
+@media all and (max-width: 380px) {
+  .footer-column.left {
+    float: none;
+    clear: both;
+    width: 100%; }
+
+  .footer-nav .content {
+    display: block; }
+    .footer-nav .content > .menu {
+      display: block; }
+      .footer-nav .content > .menu .top-level {
+        display: none; }
+      .footer-nav .content > .menu > li {
+        display: block;
+        width: 100%;
+        border-left: none;
+        padding: 10px 10px 6px;
+        border-top: 2px solid #fff; }
+        .footer-nav .content > .menu > li:first-child {
+          display: block;
+          padding-top: 0;
+          border-top: none; }
+        .footer-nav .content > .menu > li > a, .footer-nav .content > .menu > li > .nolink {
+          max-width: none; } }
