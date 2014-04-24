@@ -10,7 +10,7 @@
 function panelizer_schema() {
   // This should always point to our 'current' schema. This makes it
   // relatively easy to keep a record of schema as we make changes to it.
-  return panelizer_schema_3();
+  return panelizer_schema_4();
 }
 
 /**
@@ -248,6 +248,13 @@ function panelizer_schema_3() {
   return $schema;
 }
 
+function panelizer_schema_4() {
+  $schema = panelizer_schema_3();
+  $schema['panelizer_entity']['fields']['view_mode']['not null'] = TRUE;
+
+  return $schema;
+}
+
 /**
  * Implements hook_install().
  */
@@ -266,10 +273,10 @@ function panelizer_install() {
  */
 function panelizer_uninstall() {
   db_delete('variable')
-    ->condition('name', 'panelizer_defaults_%')
+    ->condition('name', 'panelizer_defaults_%', 'LIKE')
     ->execute();
   db_delete('variable')
-    ->condition('name', 'panelizer_node:%')
+    ->condition('name', 'panelizer_node:%', 'LIKE')
     ->execute();
 }
 
@@ -458,6 +465,56 @@ function panelizer_update_7110() {
       'description' => 'The type of the entity this panel is attached to.',
       'type' => 'varchar',
       'length' => 128,
+      'not null' => TRUE,
+    ),
+    array('primary key' => array('entity_type', 'entity_id', 'revision_id', 'view_mode'))
+  );
+}
+
+/**
+ * This update script was removed, nothing to see here.
+ */
+function panelizer_update_7111() {
+  // Nothing.
+}
+
+/**
+ * Fix Panelizer settings.
+ */
+function panelizer_update_7112() {
+  foreach (entity_get_info() as $entity_type => $entity_info) {
+    if (!empty($entity_info) && !empty($entity_info['bundles'])) {
+      foreach ($entity_info['bundles'] as $bundle => &$bundle_info) {
+        $var_name = 'panelizer_defaults_' . $entity_type . '_' . $bundle;
+        $settings = variable_get($var_name);
+        if (!empty($settings) && !empty($settings['view modes'])) {
+          foreach ($settings['view modes'] as $view_mode => &$config) {
+            // If the bundle itself or this view mode are disabled, make sure
+            // all settings are disabled.
+            if (empty($settings['status']) || empty($config['status'])) {
+              foreach ($config as $key => $val) {
+                $config[$key] = 0;
+              }
+            }
+          }
+          // Update the settings.
+          variable_set($var_name, $settings);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Make {panelizer_entity}.view_mode NOT NULL.
+ */
+function panelizer_update_7113() {
+  db_drop_primary_key('panelizer_entity');
+  db_change_field('panelizer_entity', 'view_mode', 'view_mode',
+    array(
+      'description' => 'Contains the view mode this panelizer is for.',
+      'type' => 'varchar',
+      'length' => '128',
       'not null' => TRUE,
     ),
     array('primary key' => array('entity_type', 'entity_id', 'revision_id', 'view_mode'))
