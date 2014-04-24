@@ -37,11 +37,15 @@ function avida_about_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Field: User: Profile Picture */
+  /* Field: User: Profile Picture (rewritten, include IE overlay) */
   $handler->display->display_options['fields']['field_user_picture']['id'] = 'field_user_picture';
   $handler->display->display_options['fields']['field_user_picture']['table'] = 'field_data_field_user_picture';
   $handler->display->display_options['fields']['field_user_picture']['field'] = 'field_user_picture';
+  $handler->display->display_options['fields']['field_user_picture']['ui_name'] = 'User: Profile Picture (rewritten, include IE overlay)';
   $handler->display->display_options['fields']['field_user_picture']['label'] = '';
+  $handler->display->display_options['fields']['field_user_picture']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_user_picture']['alter']['text'] = '[field_user_picture]
+<div class="ie-overlay ie-overlay-staff-photo">&nbsp;</div>';
   $handler->display->display_options['fields']['field_user_picture']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_user_picture']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['field_user_picture']['element_wrapper_class'] = 'staff-photo';

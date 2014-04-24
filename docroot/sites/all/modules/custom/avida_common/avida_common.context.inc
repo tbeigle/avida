@@ -13,6 +13,31 @@ function avida_common_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'event_calendar';
+  $context->description = '';
+  $context->tag = 'pages';
+  $context->conditions = array(
+    'views' => array(
+      'values' => array(
+        'events:page_all' => 'events:page_all',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'theme_html' => array(
+      'class' => 'event-calendar-page',
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('pages');
+  $export['event_calendar'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'global';
   $context->description = 'Elements to appear on and settings for almost every page.';
   $context->tag = 'common';
@@ -30,6 +55,12 @@ function avida_common_context_default_contexts() {
           'module' => 'system',
           'delta' => 'main-menu',
           'region' => 'nav',
+          'weight' => '-10',
+        ),
+        'menu-menu-quick-links' => array(
+          'module' => 'menu',
+          'delta' => 'menu-quick-links',
+          'region' => 'footer',
           'weight' => '-10',
         ),
       ),

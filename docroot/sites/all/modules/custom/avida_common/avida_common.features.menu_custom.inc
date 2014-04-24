@@ -34,6 +34,12 @@ function avida_common_menu_default_menu_custom() {
     'title' => 'Management',
     'description' => 'The <em>Management</em> menu contains links for administrative tasks.',
   );
+  // Exported menu: menu-quick-links.
+  $menus['menu-quick-links'] = array(
+    'menu_name' => 'menu-quick-links',
+    'title' => 'Footer Menu',
+    'description' => '',
+  );
   // Exported menu: navigation.
   $menus['navigation'] = array(
     'menu_name' => 'navigation',
@@ -51,6 +57,7 @@ function avida_common_menu_default_menu_custom() {
   t('Development');
   t('Development link');
   t('Features');
+  t('Footer Menu');
   t('Main menu');
   t('Management');
   t('Menu items for any enabled features.');
