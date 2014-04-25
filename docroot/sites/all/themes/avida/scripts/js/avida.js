@@ -2,6 +2,8 @@
   // Common JS
   Drupal.behaviors.avida = {
     attach: function (context, settings) {
+      var window_width = $(window).width();
+      
       // Vertical scrolling links
       $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -15,6 +17,21 @@
           }
         }
       });
+      
+      // Nav dropdowns
+      if (window_width > 530) {
+        $('#primary-navigation .content > .menu > li')
+        .mouseenter(function() {
+          if ($(this).children('.menu').length) {
+            $(this).children('.menu').slideDown(150);
+          }
+        })
+        .mouseleave(function() {
+          if ($(this).children('.menu').length) {
+            $(this).children('.menu').slideUp(150);
+          }
+        });
+      }
     }
   }
   
@@ -38,15 +55,6 @@
           return false;
         });
       });
-      
-      // Footer quick links
-      $('.footer-nav .content > .menu > li').addClass('top-level');
-      $('.footer-nav .content > .menu > li:first-child').removeClass('top-level').addClass('top-level-first').children('.menu').addClass('top-level');
-      if (window_width <= width_cutoff) {
-        $('.footer-nav .top-level-first').css({'cursor': 'pointer'}).click(function() {
-          $('.footer-nav .top-level').slideToggle(dur_mobile_expand);
-        });
-      }
     }
   }
 })(jQuery);
