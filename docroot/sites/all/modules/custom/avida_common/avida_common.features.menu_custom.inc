@@ -37,7 +37,7 @@ function avida_common_menu_default_menu_custom() {
   // Exported menu: menu-quick-links.
   $menus['menu-quick-links'] = array(
     'menu_name' => 'menu-quick-links',
-    'title' => 'Footer Menu',
+    'title' => 'Footer Menu - Quick Links',
     'description' => '',
   );
   // Exported menu: navigation.
@@ -57,7 +57,7 @@ function avida_common_menu_default_menu_custom() {
   t('Development');
   t('Development link');
   t('Features');
-  t('Footer Menu');
+  t('Footer Menu - Quick Links');
   t('Main menu');
   t('Management');
   t('Menu items for any enabled features.');

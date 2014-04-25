@@ -63,6 +63,24 @@ function avida_common_context_default_contexts() {
           'region' => 'footer',
           'weight' => '-10',
         ),
+        'menu_block-1' => array(
+          'module' => 'menu_block',
+          'delta' => '1',
+          'region' => 'footer',
+          'weight' => '-9',
+        ),
+        'menu_block-2' => array(
+          'module' => 'menu_block',
+          'delta' => '2',
+          'region' => 'footer',
+          'weight' => '-8',
+        ),
+        'menu_block-3' => array(
+          'module' => 'menu_block',
+          'delta' => '3',
+          'region' => 'footer',
+          'weight' => '-7',
+        ),
       ),
     ),
   );

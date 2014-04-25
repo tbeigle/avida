@@ -214,7 +214,7 @@ function avida_common_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['nothing_1']['element_wrapper_class'] = 'right';
   $handler->display->display_options['fields']['nothing_1']['element_default_classes'] = FALSE;
-  $handler->display->display_options['path'] = 'event-calendar';
+  $handler->display->display_options['path'] = 'support-services/event-calendar';
   $export['events'] = $view;
 
   return $export;
