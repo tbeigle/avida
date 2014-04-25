@@ -84,6 +84,16 @@ a {
   }
 }
 
+.page-sub-section {
+  padding-top: 28px;
+  background: url('../../images/border-with-bulb-1020x8.png') right top no-repeat;
+  margin-top: 20px;
+  
+  h1,h2,h3,h4,h5 {
+    margin-top: 0;
+  }
+}
+
 .panel-flexible .panel-separator {
   display: none;
 }
@@ -293,9 +303,12 @@ body.single-node {
     
     .block-menu {
       .content {
-        &> ul.menu {
+        ul.menu {
           padding: 0;
           margin: 0;
+        }
+        
+        &> ul.menu {
           text-align: right;
           color: $colFontNavLink;
           @include noText();
@@ -304,22 +317,76 @@ body.single-node {
             @include linkAllStates(color, $colFontNavLink);
           }
           
+          li {
+            list-style: none;
+            
+            li {
+              padding: 0;
+              margin: 0;
+              
+              a {
+                display: block;
+                padding: 5px 10px;
+                @include linkAllStates(color, $colFontBlck);
+                
+                &:link,
+                &:visited {
+                  background: #fff;
+                  //background: $colLrnMrBG;
+                }
+                
+                &:hover,
+                &:active,
+                &:focus {
+                  //background: #fff;
+                  background: $colLrnMrBG;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+          
           &> li {
+            position: relative;
             list-style: none;
             display: inline-block;
             background: url('../../images/bg-nav-link-leaf.png') 0 0 no-repeat;
             padding: 0 0 0 20px;
             margin: 0 0 0 10px;
+            overflow: visible;
             font: 14px/1.4285 $fontFamSansSpec;
+            
+            .menu {
+              position: absolute;
+              left: 20px;
+              display: none;
+              width: 100%;
+              min-width: 140px;
+              border: 1px solid $colLogoGrn;
+              border: {
+                top: none;
+              }
+              
+              li {
+                border-top: 1px solid $colLogoGrn;
+                
+                &:first-child {
+                  border-top: none;
+                }
+              }
+            }
             
             &:first-child {
               background: none;
               padding: 0;
               margin: 0;
-            }
-            
-            .menu {
-              display: none;
+              
+              .menu {
+                left: 0;
+                border: {
+                  
+                }
+              }
             }
           }
         }
@@ -359,12 +426,35 @@ body.single-node {
 }
 
 .footer-column.left {
+  display: table;
   width: 71%;
   max-width: 600px;
+  padding-top: 4px;
+  
+  .region-footer {
+    display: table-row;
+  }
 }
 
 .footer-nav {
-  padding-top: 4px;
+  display: table-cell;
+  width: 25%;
+  padding-left: 6px;
+  border-left: 2px solid #fff;
+  
+  h2,
+  h2 > a {
+    display: block;
+    color: #fff;
+    @include linkAllStates(color, #fff);
+  }
+  
+  h2 {
+    max-width: 90px;
+    margin: 0 0 6px;
+    font: bold 16px/14px $fontFamSansSpec;
+    text-transform: uppercase;
+  }
   
   .menu {
     padding: 0;
@@ -372,41 +462,14 @@ body.single-node {
   }
   
   .content {
-    display: table;
     width: 100%;
     
     li {
       list-style: none;
       display: block;
       padding: 0;
-      margin: 0;
-    }
-    
-    &> .menu {
-      display: table-row;
-      
-      &> li {
-        display: table-cell;
-        width: 25%;
-        padding-left: 6px;
-        border-left: 2px solid #fff;
-        
-        &> a,
-        &> .nolink {
-          display: block;
-          max-width: 90px;
-          margin-bottom: 6px;
-          color: #fff;
-          @include linkAllStates(color, #fff);
-          font: bold 16px/14px $fontFamSansSpec;
-          text-transform: uppercase;
-        }
-        
-        li {
-          margin-top: 5px;
-          font: 11px/1.1818 $fontFamSansSpec;
-        }
-      }
+      margin: 5px 0 0;
+      font: 11px/1.1818 $fontFamSansSpec;
     }
   }
 }

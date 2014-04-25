@@ -240,12 +240,15 @@
 @media all and (max-width: 530px) {
   .page-header {
     .nav-region {
-      float: right;
-      width: 50%;
-      margin-top: 56px;
+      float: none;
+      clear: both;
+      width: 100%;
+      margin-top: 0;
       
       .block-menu {
         &.mobile-title {
+          text-align: right;
+          
           .block-title {
             cursor: pointer;
             display: inline-block;
@@ -281,24 +284,52 @@
         .content {
           &> ul.menu {
             display: none;
+            border-bottom: 1px solid $colLogoGrn;
             text-align: left;
+            
+            li {
+              border: {
+                left: none;
+                top: 1px solid $colLogoGrn;
+                bottom: none;
+              }
+            }
             
             &> li,
             &> li:first-child {
               display: block;
               width: 100%;
               padding: 0;
-              border: {
-                left: none;
-                bottom: 1px solid $colLogoGrn;
-              }
-              
               margin: 0;
               font-size: 14px;
               text-transform: uppercase;
-              
-              &:first-child {
-                border-top: 1px solid $colLogoGrn;
+            
+              .menu {
+                position: relative;
+                left: 0;
+                display: block;
+                border: none;
+                
+                li {
+                  &:first-child {
+                    border-top: 1px solid $colLogoGrn;
+                  }
+                  
+                  a {
+                    padding-left: 40px;
+                    
+                    &:link,
+                    &:visited {
+                      background: $colLrnMrBG;
+                    }
+                    
+                    &:hover,
+                    &:active,
+                    &:focus {
+                      background: #fff;
+                    }
+                  }
+                }
               }
             }
             
@@ -418,18 +449,15 @@
   
   // Footer
   .footer-nav {
+    h2 {
+      font-size: 14px;
+      line-height: 12px;
+    }
+    
     .content {
       &> .menu {
         &> li {
-          &> a,
-          &> .no-link {
-            font-size: 14px;
-            line-height: 12px;
-          }
-          
-          li {
-            margin-right: 10px;
-          }
+          margin-right: 10px;
         }
       }
     }
@@ -439,6 +467,9 @@
 @media all and (max-width: 400px) {
   // Footer
   .footer-column.left {
+    display: none;
+  }
+  /*.footer-column.left {
     float: left;
     width: 50%;
   }
@@ -474,11 +505,11 @@
         }
       }
     }
-  }
+  }*/
 }
 @media all and (max-width: 380px) {
   // Footer
-  .footer-column.left {
+  /*.footer-column.left {
     float: none;
     clear: both;
     width: 100%;
@@ -515,5 +546,5 @@
         }
       }
     }
-  }
+  }*/
 }

@@ -69,6 +69,13 @@ a {
 .mobile-title .block-title {
   display: none; }
 
+.page-sub-section {
+  padding-top: 28px;
+  background: url("../../images/border-with-bulb-1020x8.png") right top no-repeat;
+  margin-top: 20px; }
+  .page-sub-section h1, .page-sub-section h2, .page-sub-section h3, .page-sub-section h4, .page-sub-section h5 {
+    margin-top: 0; }
+
 .panel-flexible .panel-separator {
   display: none; }
 
@@ -212,28 +219,58 @@ body.single-node.basic-page .burr-flipped-sidebar {
     bottom: 0;
     right: 0;
     width: 100%; }
-    .page-header .nav-region .block-menu .content > ul.menu {
+    .page-header .nav-region .block-menu .content ul.menu {
       padding: 0;
-      margin: 0;
+      margin: 0; }
+    .page-header .nav-region .block-menu .content > ul.menu {
       text-align: right;
       color: #767676;
       font-size: 0;
       line-height: 0; }
       .page-header .nav-region .block-menu .content > ul.menu a:link, .page-header .nav-region .block-menu .content > ul.menu a:visited, .page-header .nav-region .block-menu .content > ul.menu a:hover, .page-header .nav-region .block-menu .content > ul.menu a:active, .page-header .nav-region .block-menu .content > ul.menu a:focus {
         color: #767676; }
+      .page-header .nav-region .block-menu .content > ul.menu li {
+        list-style: none; }
+        .page-header .nav-region .block-menu .content > ul.menu li li {
+          padding: 0;
+          margin: 0; }
+          .page-header .nav-region .block-menu .content > ul.menu li li a {
+            display: block;
+            padding: 5px 10px; }
+            .page-header .nav-region .block-menu .content > ul.menu li li a:link, .page-header .nav-region .block-menu .content > ul.menu li li a:visited, .page-header .nav-region .block-menu .content > ul.menu li li a:hover, .page-header .nav-region .block-menu .content > ul.menu li li a:active, .page-header .nav-region .block-menu .content > ul.menu li li a:focus {
+              color: #292418; }
+            .page-header .nav-region .block-menu .content > ul.menu li li a:link, .page-header .nav-region .block-menu .content > ul.menu li li a:visited {
+              background: #fff; }
+            .page-header .nav-region .block-menu .content > ul.menu li li a:hover, .page-header .nav-region .block-menu .content > ul.menu li li a:active, .page-header .nav-region .block-menu .content > ul.menu li li a:focus {
+              background: #f1f1e9;
+              text-decoration: none; }
       .page-header .nav-region .block-menu .content > ul.menu > li {
+        position: relative;
         list-style: none;
         display: inline-block;
         background: url("../../images/bg-nav-link-leaf.png") 0 0 no-repeat;
         padding: 0 0 0 20px;
         margin: 0 0 0 10px;
+        overflow: visible;
         font: 14px/1.4285 "Chivo", arial, helvetica, sans-serif; }
+        .page-header .nav-region .block-menu .content > ul.menu > li .menu {
+          position: absolute;
+          left: 20px;
+          display: none;
+          width: 100%;
+          min-width: 140px;
+          border: 1px solid #afb81d;
+          border-top: none; }
+          .page-header .nav-region .block-menu .content > ul.menu > li .menu li {
+            border-top: 1px solid #afb81d; }
+            .page-header .nav-region .block-menu .content > ul.menu > li .menu li:first-child {
+              border-top: none; }
         .page-header .nav-region .block-menu .content > ul.menu > li:first-child {
           background: none;
           padding: 0;
           margin: 0; }
-        .page-header .nav-region .block-menu .content > ul.menu > li .menu {
-          display: none; }
+          .page-header .nav-region .block-menu .content > ul.menu > li:first-child .menu {
+            left: 0; }
 
 .with-right-sidebar #content-wrapper {
   width: 75.2825%;
@@ -255,41 +292,45 @@ body.single-node.basic-page .burr-flipped-sidebar {
     text-decoration: none; }
 
 .footer-column.left {
+  display: table;
   width: 71%;
-  max-width: 600px; }
+  max-width: 600px;
+  padding-top: 4px; }
+  .footer-column.left .region-footer {
+    display: table-row; }
 
 .footer-nav {
-  padding-top: 4px; }
+  display: table-cell;
+  width: 25%;
+  padding-left: 6px;
+  border-left: 2px solid #fff; }
+  .footer-nav h2,
+  .footer-nav h2 > a {
+    display: block;
+    color: #fff; }
+    .footer-nav h2:link, .footer-nav h2:visited, .footer-nav h2:hover, .footer-nav h2:active, .footer-nav h2:focus,
+    .footer-nav h2 > a:link,
+    .footer-nav h2 > a:visited,
+    .footer-nav h2 > a:hover,
+    .footer-nav h2 > a:active,
+    .footer-nav h2 > a:focus {
+      color: white; }
+  .footer-nav h2 {
+    max-width: 90px;
+    margin: 0 0 6px;
+    font: bold 16px/14px "Chivo", arial, helvetica, sans-serif;
+    text-transform: uppercase; }
   .footer-nav .menu {
     padding: 0;
     margin: 0; }
   .footer-nav .content {
-    display: table;
     width: 100%; }
     .footer-nav .content li {
       list-style: none;
       display: block;
       padding: 0;
-      margin: 0; }
-    .footer-nav .content > .menu {
-      display: table-row; }
-      .footer-nav .content > .menu > li {
-        display: table-cell;
-        width: 25%;
-        padding-left: 6px;
-        border-left: 2px solid #fff; }
-        .footer-nav .content > .menu > li > a, .footer-nav .content > .menu > li > .nolink {
-          display: block;
-          max-width: 90px;
-          margin-bottom: 6px;
-          color: #fff;
-          font: bold 16px/14px "Chivo", arial, helvetica, sans-serif;
-          text-transform: uppercase; }
-          .footer-nav .content > .menu > li > a:link, .footer-nav .content > .menu > li > a:visited, .footer-nav .content > .menu > li > a:hover, .footer-nav .content > .menu > li > a:active, .footer-nav .content > .menu > li > a:focus, .footer-nav .content > .menu > li > .nolink:link, .footer-nav .content > .menu > li > .nolink:visited, .footer-nav .content > .menu > li > .nolink:hover, .footer-nav .content > .menu > li > .nolink:active, .footer-nav .content > .menu > li > .nolink:focus {
-            color: white; }
-        .footer-nav .content > .menu > li li {
-          margin-top: 5px;
-          font: 11px/1.1818 "Chivo", arial, helvetica, sans-serif; }
+      margin: 5px 0 0;
+      font: 11px/1.1818 "Chivo", arial, helvetica, sans-serif; }
 
 .copyright-footer {
   font: 11px/1.64 'Chivo', Arial, Helvetica, sans-serif;
