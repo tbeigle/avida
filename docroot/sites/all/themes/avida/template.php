@@ -51,6 +51,19 @@ function avida_preprocess_views_view_list(&$vars) {
 }
 
 /**
+ * Implements template_preprocess_panels_pane()
+ */
+function avida_preprocess_panels_pane(&$vars) {
+  global $_avida_pane_ids;
+  if (empty($_avida_pane_ids)) $_avida_pane_ids = array();
+  
+  if (!empty($vars['title']) && empty($vars['id'])) {
+    $id_base = 'avida-pane-' . strtolower(str_replace(' ', '-', $vars['title']));
+    $vars['id'] = 'id="' . _avida_unique_id($id_base, $_avida_pane_ids) . '"';
+  }
+}
+
+/**
  * Adds apple shortcut icons to the HTML head
  */
 function _avida_apple_touch_icons() {
@@ -92,4 +105,26 @@ function _avida_lt_ie_9(&$vars, $theme_path) {
       '#markup' => '<link rel="stylesheet" type="text/css" href="' . $path_prefix . '/styles/css/lt-ie-9.css" media="all" />',
     ),
   );
+}
+
+/**
+ * Helper function for creating unique HTML id attributes
+ */
+function _avida_unique_id($test_id, $ids = array()) {
+  if (!in_array($test_id, $ids)) {
+    $id = $test_id;
+  }
+  else {
+    $counter = 0;
+    while (empty($id)) {
+      $test = $test_id . '-' . $counter;
+      if (!in_array($test, $ids)) {
+        $id = $test;
+      }
+      
+      $counter++;
+    }
+  }
+  
+  return $id;
 }
