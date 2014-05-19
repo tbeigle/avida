@@ -171,12 +171,18 @@ function avida_common_views_default_views() {
   $handler->display->display_options['fields']['field_event_flyer']['ui_name'] = 'Content: Flyer (excluded)';
   $handler->display->display_options['fields']['field_event_flyer']['label'] = '';
   $handler->display->display_options['fields']['field_event_flyer']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_event_flyer']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_event_flyer']['alter']['text'] = '<div class="event-flyer">
+  <div class="field-label">Event Flyer:</div>
+  [field_event_flyer]
+</div>';
   $handler->display->display_options['fields']['field_event_flyer']['element_label_type'] = 'div';
   $handler->display->display_options['fields']['field_event_flyer']['element_label_class'] = 'field-label';
   $handler->display->display_options['fields']['field_event_flyer']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_flyer']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['field_event_flyer']['element_wrapper_class'] = 'event-flyer';
   $handler->display->display_options['fields']['field_event_flyer']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_event_flyer']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_event_flyer']['click_sort_column'] = 'fid';
   /* Field: Left Column */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
@@ -206,10 +212,7 @@ function avida_common_views_default_views() {
   [field_event_dets] 
 </div>
 
-<div class="event-flyer">
-  <div class="field-label">Event Flyer:</div>
-  [field_event_flyer]
-</div>';
+[field_event_flyer]';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing_1']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['nothing_1']['element_wrapper_class'] = 'right';
