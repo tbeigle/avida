@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * avida_common.features.user_role.inc
+ * avida_user.features.user_role.inc
  */
 
 /**
  * Implements hook_user_default_roles().
  */
-function avida_common_user_default_roles() {
+function avida_user_user_default_roles() {
   $roles = array();
 
   // Exported role: administrator.
