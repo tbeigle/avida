@@ -18,7 +18,7 @@ function avida_home_default_fe_block_boxes() {
 Getting Started</h2>
 
 <p>
-<a href="#">learn more</a></p>
+<a href="http://stage.avidainc.com/about-us">learn more</a></p>
 ';
 
   $export['home_block_1'] = $fe_block_boxes;
