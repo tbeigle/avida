@@ -54,6 +54,14 @@ a {
   }
 }
 
+.img-inline {
+  &.faq {
+    float: left;
+    max-width: 50%;
+    padding: 0 20px 20px 0;
+  }
+}
+
 .left {
   float: left;
 }
