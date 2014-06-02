@@ -314,26 +314,6 @@ function avida_user_user_default_permissions() {
     'module' => 'environment_indicator',
   );
 
-  // Exported permission: 'administer faq'.
-  $permissions['administer faq'] = array(
-    'name' => 'administer faq',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
-    ),
-    'module' => 'faq',
-  );
-
-  // Exported permission: 'administer faq order'.
-  $permissions['administer faq order'] = array(
-    'name' => 'administer faq order',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
-    ),
-    'module' => 'faq',
-  );
-
   // Exported permission: 'administer features'.
   $permissions['administer features'] = array(
     'name' => 'administer features',
@@ -621,16 +601,6 @@ function avida_user_user_default_permissions() {
   // Exported permission: 'administer panelizer node event settings'.
   $permissions['administer panelizer node event settings'] = array(
     'name' => 'administer panelizer node event settings',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
-    ),
-    'module' => 'panelizer',
-  );
-
-  // Exported permission: 'administer panelizer node faq defaults'.
-  $permissions['administer panelizer node faq defaults'] = array(
-    'name' => 'administer panelizer node faq defaults',
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
@@ -1064,6 +1034,7 @@ function avida_user_user_default_permissions() {
     'name' => 'administer users',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
     ),
     'module' => 'user',
   );
@@ -1185,16 +1156,6 @@ function avida_user_user_default_permissions() {
   // Exported permission: 'create event content'.
   $permissions['create event content'] = array(
     'name' => 'create event content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'create faq content'.
-  $permissions['create faq content'] = array(
-    'name' => 'create faq content',
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
@@ -1411,16 +1372,6 @@ function avida_user_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'delete any faq content'.
-  $permissions['delete any faq content'] = array(
-    'name' => 'delete any faq content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'delete any image files'.
   $permissions['delete any image files'] = array(
     'name' => 'delete any image files',
@@ -1574,16 +1525,6 @@ function avida_user_user_default_permissions() {
   // Exported permission: 'delete own event content'.
   $permissions['delete own event content'] = array(
     'name' => 'delete own event content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete own faq content'.
-  $permissions['delete own faq content'] = array(
-    'name' => 'delete own faq content',
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
@@ -1800,16 +1741,6 @@ function avida_user_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'edit any faq content'.
-  $permissions['edit any faq content'] = array(
-    'name' => 'edit any faq content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'edit any image files'.
   $permissions['edit any image files'] = array(
     'name' => 'edit any image files',
@@ -1983,16 +1914,6 @@ function avida_user_user_default_permissions() {
   // Exported permission: 'edit own event content'.
   $permissions['edit own event content'] = array(
     'name' => 'edit own event content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit own faq content'.
-  $permissions['edit own faq content'] = array(
-    'name' => 'edit own faq content',
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
@@ -2397,17 +2318,6 @@ function avida_user_user_default_permissions() {
       'editor' => 'editor',
     ),
     'module' => 'advanced_help',
-  );
-
-  // Exported permission: 'view faq page'.
-  $permissions['view faq page'] = array(
-    'name' => 'view faq page',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'faq',
   );
 
   // Exported permission: 'view files'.
