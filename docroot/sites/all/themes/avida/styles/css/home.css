@@ -47,10 +47,17 @@
       padding-top: 7px;
       background: #fff;
       font-size: 14px; }
+.home-page .home-connect-pane h2,
 .home-page .node h2 {
   margin: 0;
   font: 24px/1 "Chivo", arial, helvetica, sans-serif;
   text-transform: uppercase; }
+.home-page .home-connect-pane h2,
+.home-page .home-connect-pane h2 a:link,
+.home-page .home-connect-pane h2 a:visited,
+.home-page .home-connect-pane h2 a:hover,
+.home-page .home-connect-pane h2 a:active,
+.home-page .home-connect-pane h2 a:focus,
 .home-page .node h2,
 .home-page .node h2 a:link,
 .home-page .node h2 a:visited,
