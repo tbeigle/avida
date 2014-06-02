@@ -167,7 +167,7 @@ function avida_common_field_default_field_instances() {
       'description_field' => 0,
       'file_directory' => 'event-fliers',
       'file_extensions' => 'txt doc docx pdf rtf jpg jpeg png gif',
-      'max_filesize' => '',
+      'max_filesize' => '20 MB',
       'user_register_form' => FALSE,
     ),
     'widget' => array(

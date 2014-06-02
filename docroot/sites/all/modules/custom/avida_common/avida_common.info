@@ -13,6 +13,7 @@ dependencies[] = menu
 dependencies[] = menu_block
 dependencies[] = panelizer
 dependencies[] = strongarm
+dependencies[] = views
 dependencies[] = views_content
 features[ckeditor_profile][] = Advanced
 features[ckeditor_profile][] = CKEditor Global Profile
