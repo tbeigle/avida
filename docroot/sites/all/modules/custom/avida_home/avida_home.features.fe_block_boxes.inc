@@ -12,32 +12,34 @@ function avida_home_default_fe_block_boxes() {
 
   $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Home Three Columns: Column 1';
-  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->format = 'filtered_html';
   $fe_block_boxes->machine_name = 'home_block_1';
-  $fe_block_boxes->body = '<h2>
-Getting Started</h2>
+  $fe_block_boxes->body = '<h2>Getting Started</h2>
 
-<p>
-<a href="http://stage.avidainc.com/about-us">learn more</a></p>
+<p><a href="http://stage.avidainc.com/about-us">learn more</a></p>
 ';
 
   $export['home_block_1'] = $fe_block_boxes;
 
   $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Home Three Columns: Column 2';
-  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->format = 'filtered_html';
   $fe_block_boxes->machine_name = 'home_block_2';
   $fe_block_boxes->body = '<h2>Volunteer</h2>
-<p><a href="#">learn more</a></p>';
+
+<p><a href="#">learn more</a></p>
+';
 
   $export['home_block_2'] = $fe_block_boxes;
 
   $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Home Three Columns: Column 3';
-  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->format = 'filtered_html';
   $fe_block_boxes->machine_name = 'home_block_3';
   $fe_block_boxes->body = '<h2>Clinical Trials</h2>
-<p><a href="#">learn more</a></p>';
+
+<p><a href="#">learn more</a></p>
+';
 
   $export['home_block_3'] = $fe_block_boxes;
 
