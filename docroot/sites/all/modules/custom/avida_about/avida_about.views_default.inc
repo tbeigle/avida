@@ -82,7 +82,6 @@ function avida_about_views_default_views() {
   $handler->display->display_options['fields']['field_user_about']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['field_user_about']['element_wrapper_class'] = 'staff-about';
   $handler->display->display_options['fields']['field_user_about']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_user_about']['type'] = 'text_summary_or_trimmed';
   $handler->display->display_options['fields']['field_user_about']['settings'] = array(
     'trim_length' => '110',
   );
