@@ -197,7 +197,7 @@ body.single-node.basic-page .burr-flipped-sidebar {
 .views-list.events-list .brenham-content {
   float: right;
   width: 100%;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.45; }
   .views-list.events-list .brenham-content p {
     margin: 3px 0 0; }
@@ -330,7 +330,8 @@ body.single-node.basic-page .burr-flipped-sidebar {
       display: block;
       padding: 0;
       margin: 5px 0 0;
-      font: 11px/1.1818 "Chivo", arial, helvetica, sans-serif; }
+      font: 13px "Chivo", arial, helvetica, sans-serif;
+      line-height: 1.1818; }
 
 .copyright-footer {
   font: 11px/1.64 'Chivo', Arial, Helvetica, sans-serif;

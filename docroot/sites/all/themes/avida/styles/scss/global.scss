@@ -265,7 +265,7 @@ body.single-node {
     .brenham-content {
       float: right;
       width: 100%;
-      font-size: 11px;
+      font-size: $fsHmBttmCols;
       line-height: 1.45;
       
       p {
@@ -469,7 +469,8 @@ body.single-node {
       display: block;
       padding: 0;
       margin: 5px 0 0;
-      font: 11px/1.1818 $fontFamSansSpec;
+      font: $fsHmBttmCols $fontFamSansSpec;
+      line-height: 1.1818;
     }
   }
 }

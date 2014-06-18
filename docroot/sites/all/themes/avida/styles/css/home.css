@@ -13,7 +13,8 @@
   padding: 0; }
 .avida-132.bottom-col.col-1 {
   padding: 0 30px 0 60px;
-  font: 11px/1.72 arial, helvetica, sans-serif;
+  font: 13px arial, helvetica, sans-serif;
+  line-height: 1.72;
   text-align: right; }
   .avida-132.bottom-col.col-1 p {
     margin: 1em 0 0; }
