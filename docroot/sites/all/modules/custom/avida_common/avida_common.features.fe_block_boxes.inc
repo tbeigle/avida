@@ -11,6 +11,31 @@ function avida_common_default_fe_block_boxes() {
   $export = array();
 
   $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Work with Us - Patients';
+  $fe_block_boxes->format = 'filtered_html';
+  $fe_block_boxes->machine_name = 'work_with_us_patients';
+  $fe_block_boxes->body = '<p>Our medical research studies allow people to participate as volunteers. By taking part in clinical protocols, patients may be the first to receive promising new therapies before they are widely available.&nbsp;</p>
+
+<p>How do I enroll myself or my child?&nbsp;</p>
+
+<p>You can contact us at 949-336-6161. Parents or guardians must call to register anyone under 18 years of age. Our studies for adults may require the assistance of another adult (significant other, parent, employer, adult child) for some of the assessments.<br />
+<br />
+What&nbsp;is the purpose of&nbsp;the initial phone call?&nbsp;&nbsp;</p>
+
+<p>You should expect about a 15-minute discussion which will begin with questions about your identifying information. Questions are geared to determine if you may be eligible for one of AVIDA&#39;s new or ongoing studies. Discussion will include basic information about medical research that you or your child seem eligible for participation.<br />
+<br />
+What is the next step? &nbsp;</p>
+
+<p>If you seem eligible and are interested in learning more, you will be scheduled for an initial screening appointment during which the study information will be presented in both written and oral forms.<br />
+<br />
+What is an informed consent form?&nbsp;</p>
+
+<p>This form contains important details about the&nbsp;research to help you&nbsp;fully understand the study and what your involvement would mean.&nbsp;Study information includes the&nbsp;time-period, required number of visits, medical procedures, and medication studied. Expected outcomes, potential benefits, and possible risks are also included as well as the fact that all research participation is voluntary.</p>
+';
+
+  $export['work_with_us_patients'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Work with Us - Sponsors';
   $fe_block_boxes->format = 'filtered_html';
   $fe_block_boxes->machine_name = 'work_with_us_sponsors';
