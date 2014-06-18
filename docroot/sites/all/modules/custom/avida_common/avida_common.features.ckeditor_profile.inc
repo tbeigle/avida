@@ -52,7 +52,7 @@ function avida_common_ckeditor_profile_defaults() {
         ),
         'css_mode' => 'none',
         'css_path' => '',
-        'css_style' => 'theme',
+        'css_style' => 'default',
         'styles_path' => '',
         'filebrowser' => 'imce',
         'filebrowser_image' => '',
@@ -63,7 +63,7 @@ function avida_common_ckeditor_profile_defaults() {
         'html_entities' => 't',
         'scayt_autoStartup' => 'f',
         'theme_config_js' => 'f',
-        'js_conf' => '',
+        'js_conf' => 'config.allowedContent = true;',
         'loadPlugins' => array(
           'drupalbreaks' => array(
             'name' => 'drupalbreaks',

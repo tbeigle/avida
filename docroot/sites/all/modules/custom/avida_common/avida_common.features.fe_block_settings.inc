@@ -12,33 +12,6 @@ function avida_common_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
-  $export['block-work_with_us_employees'] = array(
-    'cache' => -1,
-    'css_class' => 'page-sub-section',
-    'custom' => 0,
-    'machine_name' => 'work_with_us_employees',
-    'module' => 'block',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'avida' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'avida',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'Employees',
-    'visibility' => 0,
-  );
-
   $export['block-work_with_us_sponsors'] = array(
     'cache' => -1,
     'css_class' => 'page-sub-section',
