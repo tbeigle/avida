@@ -55,7 +55,18 @@
     float: none;
     clear: both;
     width: 100%;
-    margin-bottom: 25px; } }
+    margin-bottom: 25px; }
+
+  .avida-two-cols-img .avida-col-content {
+    float: none;
+    width: 100%; }
+    .avida-two-cols-img .avida-col-content > .inside {
+      margin-right: 0; }
+    .avida-two-cols-img .avida-col-content .avida-main-content-img {
+      width: 50%; }
+  .avida-two-cols-img .avida-col-sidebar {
+    float: none;
+    width: 100%; } }
 @media all and (max-width: 660px) {
   .home-page .banner {
     padding-left: 320px; } }
@@ -182,7 +193,14 @@
       border-top: none;
       border-right: 5px solid transparent;
       border-left: 5px solid transparent;
-      border-bottom: 10px solid #afb81d; } }
+      border-bottom: 10px solid #afb81d; }
+
+  .avida-two-cols-img .avida-col-content .avida-main-content-img {
+    width: 100%;
+    text-align: center; }
+  .avida-two-cols-img.avida-img-left .avida-main-content-img, .avida-two-cols-img.avida-img-right .avida-main-content-img {
+    float: none;
+    padding: 0 0 20px; } }
 @media all and (max-width: 480px) {
   body.single-node.basic-page .burr-flipped-content,
   body.single-node.basic-page .burr-flipped-sidebar {

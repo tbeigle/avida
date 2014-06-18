@@ -126,6 +126,27 @@
     width: 100%;
     margin-bottom: 25px;
   }
+  
+  // Two Columns, Image Left
+  .avida-two-cols-img {
+    .avida-col-content {
+      float: none;
+      width: 100%;
+      
+      &> .inside {
+        margin-right: 0;
+      }
+      
+      .avida-main-content-img {
+        width: 50%;
+      }
+    }
+    
+    .avida-col-sidebar {
+      float: none;
+      width: 100%;
+    }
+  }
 }
 
 @media all and (max-width: 660px) {
@@ -376,6 +397,24 @@
             }
           }
         }
+      }
+    }
+  }
+  
+  // Two Columns, Image Left
+  .avida-two-cols-img {
+    .avida-col-content {
+      .avida-main-content-img {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    
+    &.avida-img-left,
+    &.avida-img-right {
+      .avida-main-content-img {
+        float: none;
+        padding: 0 0 20px;
       }
     }
   }
