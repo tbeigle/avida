@@ -513,10 +513,14 @@ body.single-node {
   
   .staff-photo {
     border: 5px solid $colLogoLght;
-    @include vendorize(border-radius, 50%);
     overflow: hidden;
     margin: 0 auto 20px;
     @include noText();
+  }
+  
+  .staff-photo,
+  .staff-photo img {
+    @include vendorize(border-radius, 50%);
   }
   
   .staff-position,

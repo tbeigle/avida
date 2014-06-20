@@ -357,15 +357,17 @@ body.single-node.basic-page .burr-flipped-sidebar {
   max-width: 160px; }
 .staff-list .staff-photo {
   border: 5px solid #008e91;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 20px;
   font-size: 0;
   line-height: 0; }
+.staff-list .staff-photo,
+.staff-list .staff-photo img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%; }
 .staff-list .staff-position,
 .staff-list .staff-name {
   margin: 0 0 12px;
