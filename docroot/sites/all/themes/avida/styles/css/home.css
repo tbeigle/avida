@@ -35,19 +35,27 @@
   padding: 20px 40px 0 370px;
   background: #f6f5f1 url("../../images/banner-home.png") 0 bottom no-repeat;
   text-align: right; }
-  .home-page .banner p {
+  .home-page .banner h2 {
     clear: both;
-    padding-left: 116px;
+    padding-left: 173px;
     font: italic 14px/1.6 "Chivo", arial, helvetica, sans-serif;
     color: #292418; }
-  .home-page .banner .more-box {
+  .home-page .banner p {
     padding: 0;
     background: none; }
-    .home-page .banner .more-box p a {
+    .home-page .banner p a {
+      display: inline-block;
       height: 40px;
-      padding-top: 7px;
+      padding: 7px 16px 0;
       background: #fff;
+      border: 1px solid #d0d0d0;
       font-size: 14px; }
+      .home-page .banner p a:link, .home-page .banner p a:visited {
+        text-decoration: underline; }
+      .home-page .banner p a:hover, .home-page .banner p a:active, .home-page .banner p a:focus {
+        text-decoration: none; }
+      .home-page .banner p a:link, .home-page .banner p a:visited, .home-page .banner p a:hover, .home-page .banner p a:active, .home-page .banner p a:focus {
+        color: #292418; }
 .home-page .home-connect-pane h2,
 .home-page .node h2 {
   margin: 0;

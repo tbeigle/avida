@@ -64,22 +64,28 @@
     background: $colTitleTan url('../../images/banner-home.png') 0 bottom no-repeat;
     text-align: right;
     
-    p {
+    h2 {
       clear: both;
-      padding-left: 116px;
+      padding-left: 173px;
       font: italic 14px/1.6 $fontFamSansSpec;
       color: $colFontBlck
     }
     
-    .more-box {
+    p {
       padding: 0;
       background: none;
       
-      p a {
+      a {
+        display: inline-block;
         height: 40px;
-        padding-top: 7px;
+        padding: 7px 16px 0;
         background: #fff;
+        border: 1px solid $colLrnMrBrdr;
         font-size: 14px;
+        
+        @include linkVisited(text-decoration, underline);
+        @include hoverActiveFocus(text-decoration, none);
+        @include linkAllStates(color, $colFontBlck);
       }
     }
   }
