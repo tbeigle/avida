@@ -448,7 +448,8 @@ body.single-node.basic-page .burr-flipped-sidebar {
 .page-node-11 .pane-bundle-basic-file h2.pane-title {
   font-size: 1em; }
 
-.page-sub-section .pane-content img {
+.page-sub-section .pane-content img,
+.pane-node-field-page-body img {
   float: left;
   padding: 0 20px 10px 0; }
 

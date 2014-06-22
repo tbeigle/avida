@@ -679,7 +679,8 @@ body.single-node {
   }
 }
 
-.page-sub-section .pane-content img {
+.page-sub-section .pane-content img,
+.pane-node-field-page-body img {
   float: left;
   padding: 0 20px 10px 0;
 }
