@@ -25,6 +25,9 @@
     h1 {
       font-size: 24px;
     }
+    h2 {
+      padding-left: 134px;
+    }
     
     .banner {
       p {
@@ -52,6 +55,10 @@
   .home-page {
     h1 {
       font-size: 18px;
+    }
+    
+    h2 {
+      padding-left: 0;
     }
     
     .banner {
@@ -85,7 +92,13 @@
       }
     }
   }
-  
+  .panels-flexible-one_column_image_left {
+    display: none;
+  }
+  .avida-main-content {
+    float: none;
+    width: 100%;
+  }
   body.single-node.basic-page {
     .burr-flipped-content {
       width: 60%;
