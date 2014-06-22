@@ -28,6 +28,10 @@ h1 {
   color: $colFontBlck;
 }
 
+.field-name-field-page-body h2:first-child {
+  margin-top: 0;
+}
+
 p {
   margin: 0 0 12px;
 }
@@ -696,4 +700,16 @@ body.single-node {
 
 .burr-flipped-sidebar .panels-ipe-portlet-wrapper {
   padding-bottom: 20px;
+}
+
+.avida-one-column {
+  .avida-img {
+    float: left;
+    max-width: 50%;
+    padding: 0 20px 10px 0;
+  }
+  
+  .avida-main-content {
+    
+  }
 }
