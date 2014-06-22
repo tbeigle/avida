@@ -679,6 +679,9 @@ body.single-node {
   }
 }
 
+.pane-node-field-page-body {
+  overflow: hidden;
+}
 .page-sub-section .pane-content img,
 .pane-node-field-page-body img {
   float: left;
