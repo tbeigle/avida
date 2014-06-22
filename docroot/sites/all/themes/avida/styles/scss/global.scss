@@ -29,12 +29,15 @@ h1 {
 }
 
 .field-name-field-page-body {
-  h2,
-  h3 {
+  h2 {
     &:first-child {
       margin-top: 0;
     }
   }
+}
+
+h3 {
+  margin-top: 0;
 }
 
 p {
