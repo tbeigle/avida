@@ -156,7 +156,13 @@ a {
 body.single-node.basic-page .panel-display.burr-flipped.container {
   padding: 0; }
 body.single-node.basic-page .burr-flipped-content {
-  width: 77.4725%; }
+  width: 77.4725%;
+  overflow: hidden; }
+  body.single-node.basic-page .burr-flipped-content .panopoly-image-full {
+    float: left;
+    width: auto;
+    max-width: 50%;
+    padding: 0 20px 10px 0; }
 body.single-node.basic-page .burr-flipped-content-inner {
   margin-right: 5.1063%; }
 body.single-node.basic-page .burr-flipped-sidebar {
@@ -337,57 +343,59 @@ body.single-node.basic-page .burr-flipped-sidebar {
   font: 11px/1.64 'Chivo', Arial, Helvetica, sans-serif;
   color: #fff; }
 
-.staff-list ul {
-  padding: 0;
-  margin: 0; }
-.staff-list li {
-  list-style: none;
-  float: left;
-  width: 33.3333%;
-  padding: 0 5px;
-  margin: 0 0 64px;
-  text-align: center; }
-  .staff-list li.col-3 {
-    margin-right: 0; }
-  .staff-list li.col-1 {
-    clear: left; }
-.staff-list .staff-photo,
-.staff-list .staff-about {
-  width: 100%;
-  max-width: 160px; }
-.staff-list .staff-photo {
-  border: 5px solid #008e91;
-  overflow: hidden;
-  margin: 0 auto 20px;
-  font-size: 0;
-  line-height: 0; }
-.staff-list .staff-photo,
-.staff-list .staff-photo img {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%; }
-.staff-list .staff-position,
-.staff-list .staff-name {
-  margin: 0 0 12px;
-  font-size: 14px;
-  font-family: "Chivo", arial, helvetica, sans-serif; }
-.staff-list .staff-position {
-  font-weight: normal;
-  text-transform: uppercase;
-  color: #333333; }
-.staff-list .staff-name {
-  margin-bottom: 13px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #008e91; }
-.staff-list .staff-about {
-  margin: auto; }
-  .staff-list .staff-about p {
-    margin: 1em 0 0; }
-    .staff-list .staff-about p:first-child {
-      margin: 0; }
+.staff-list {
+  padding-top: 10px; }
+  .staff-list ul {
+    padding: 0;
+    margin: 0; }
+  .staff-list li {
+    list-style: none;
+    float: left;
+    width: 33.3333%;
+    padding: 0 5px;
+    margin: 0 0 64px;
+    text-align: center; }
+    .staff-list li.col-3 {
+      margin-right: 0; }
+    .staff-list li.col-1 {
+      clear: left; }
+  .staff-list .staff-photo,
+  .staff-list .staff-about {
+    width: 100%;
+    max-width: 160px; }
+  .staff-list .staff-photo {
+    border: 5px solid #008e91;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    font-size: 0;
+    line-height: 0; }
+  .staff-list .staff-photo,
+  .staff-list .staff-photo img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%; }
+  .staff-list .staff-position,
+  .staff-list .staff-name {
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-family: "Chivo", arial, helvetica, sans-serif; }
+  .staff-list .staff-position {
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #333333; }
+  .staff-list .staff-name {
+    margin-bottom: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #008e91; }
+  .staff-list .staff-about {
+    margin: auto; }
+    .staff-list .staff-about p {
+      margin: 1em 0 0; }
+      .staff-list .staff-about p:first-child {
+        margin: 0; }
 
 .event-calendar-page .views-list.events-list .event-title {
   margin-bottom: 0.5em;
