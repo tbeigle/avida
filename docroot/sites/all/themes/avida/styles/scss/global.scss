@@ -28,8 +28,13 @@ h1 {
   color: $colFontBlck;
 }
 
-.field-name-field-page-body h2:first-child {
-  margin-top: 0;
+.field-name-field-page-body {
+  h2,
+  h3 {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 }
 
 p {

@@ -20,7 +20,8 @@ h1 {
   font: bold 34px/1.1 "Chivo", arial, helvetica, sans-serif;
   color: #292418; }
 
-.field-name-field-page-body h2:first-child {
+.field-name-field-page-body h2:first-child,
+.field-name-field-page-body h3:first-child {
   margin-top: 0; }
 
 p {
