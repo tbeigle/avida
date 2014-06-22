@@ -10,6 +10,8 @@
 
   .home-page h1 {
     font-size: 24px; }
+  .home-page h2 {
+    padding-left: 134px; }
   .home-page .banner p {
     font-size: 12px; } }
 @media all and (max-width: 768px) {
@@ -18,6 +20,8 @@
 
   .home-page h1 {
     font-size: 18px; }
+  .home-page h2 {
+    padding-left: 0; }
   .home-page .banner p {
     padding-left: 0; } }
 @media all and (max-width: 690px) {
@@ -30,6 +34,13 @@
       padding-left: 0;
       border-left: none;
       margin-left: 0; }
+
+  .panels-flexible-one_column_image_left {
+    display: none; }
+
+  .avida-main-content {
+    float: none;
+    width: 100%; }
 
   body.single-node.basic-page .burr-flipped-content {
     width: 60%; }
