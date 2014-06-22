@@ -214,6 +214,9 @@
     float: none;
     padding: 0 0 20px; } }
 @media all and (max-width: 480px) {
+  h1 {
+    font-size: 30px; }
+
   body.single-node.basic-page .burr-flipped-content,
   body.single-node.basic-page .burr-flipped-sidebar {
     float: none;
