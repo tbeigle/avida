@@ -7,7 +7,8 @@
   clear: both;
   width: 100%;
   max-width: 460px;
-  margin: 20px auto 60px; }
+  padding-top: 20px;
+  margin: 0 auto 60px; }
   .landing-coming-soon #logo img {
     display: block; }
 .landing-coming-soon h1 {
@@ -83,3 +84,44 @@
       list-style: none;
       padding: 0;
       margin: 0; }
+
+@media screen and (max-width: 480px) {
+  body.landing-coming-soon {
+    width: 100%;
+    margin: 0;
+    font-size: 1em; }
+
+  .landing-coming-soon h1 {
+    font-size: 2em; }
+  .landing-coming-soon .body-emph {
+    font-size: 1.125em; }
+  .landing-coming-soon .sutro-column-content {
+    background: none; }
+    .landing-coming-soon .sutro-column-content .sutro-column1 {
+      margin-bottom: 20px; }
+      .landing-coming-soon .sutro-column-content .sutro-column1 .sutro-column-inner {
+        border-right: none; }
+
+  .coming-soon-boxes h2 {
+    font-size: 1em; }
+
+  .coming-soon-contact-info h2 {
+    font-size: 1em; } }
+@media screen and (max-width: 320px) {
+  body.landing-coming-soon {
+    font-size: 0.9em; }
+    body.landing-coming-soon h1 {
+      font-size: 1.5em; }
+    body.landing-coming-soon .body-emph {
+      font-size: 1em; }
+
+  .lp-changing-lives h2 {
+    font-size: 12px; }
+  .lp-changing-lives .horizontal.with-bullets li {
+    font-size: 12px; }
+
+  .coming-soon-boxes h2 {
+    padding: 10px; }
+
+  .coming-soon-contact-info {
+    margin-top: 40px; } }

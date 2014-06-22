@@ -74,38 +74,35 @@
 ?>
 <div id="page-wrapper">
   <div class="inner row">
-    <?php if ($logo || $page['logo'] || $page['header'] || $page['nav']): ?>
+    <?php if ($page['header'] || $logo || $page['logo'] || $page['nav']): ?>
       <header id="header" class="page-header row clearfix">
-        <?php if ($logo || $page['logo'] || $page['header']): ?>
-          <div class="row clearfix header-logo-region">
-            <div class="row clearfix logo-row">
-              <?php if ($logo || $page['logo']): ?>
-                <div class="header-top">
-                  <div class="inner container">
-                    <?php if ($logo && !$page['logo']): ?>
-                      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-                        <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-                      </a>
-                    <?php endif; ?>
-                    
-                    <?php if ($page['logo']): ?>
-                      <?php print render($page['logo']); ?>
-                    <?php endif; ?>
-                  </div> <!-- /.inner /.container -->
-                </div> <!-- /.header-top -->
-              <?php endif; ?>
-              
-              <?php if ($page['header']): ?>
-                <div id="region-header-wrapper" class="header-secondary">
-                  <?php print render($page['header']); ?>
-                </div> <!-- /#region-header-wrapper /.header-secondary -->
-              <?php endif; ?>
-            </div> <!-- /.row /.clearfix /.logo-row -->
-          </div> <!-- /.row /.clearfix /.header-logo-region -->
+        <?php if ($page['header']): ?>
+          <div class="row header-row">
+            <?php print render($page['header']); ?>
+          </div> <!-- /.row /.header-row -->
+        <?php endif; ?>
+        
+        <?php if ($logo || $page['logo']): ?>
+          <div class="column left logo-header">
+            <?php if ($logo || $page['logo']): ?>
+              <div class="header-logo">
+                <?php if ($logo && !$page['logo']): ?>
+                  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+                    <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+                  </a>
+                <?php endif; ?>
+                
+                <?php if ($page['logo']): ?>
+                  <?php print render($page['logo']); ?>
+                <?php endif; ?>
+              </div> <!-- /.header-logo -->
+            <?php endif; ?>
+          </div>
+          <!-- /.column /.left /.logo-header -->
         <?php endif; ?>
         
         <?php if ($page['nav']): ?>
-          <div class="row clearfix nav-region">
+          <div class="column right nav-region">
             <nav id="primary-navigation" class="nav clearfix row">
               <?php if ($page['nav']): ?>
                 <?php print render($page['nav']); ?>
@@ -200,15 +197,15 @@
   <footer id="footer" class="clearfix container">
     <div class="row clearfix">
       <?php if ($page['footer']): ?>
-        <div class="column right footer-column">
+        <div class="column left footer-column">
           <?php print render($page['footer']); ?>
-        </div> <!-- /.column /.right /.footer-column -->
+        </div> <!-- /.column /.left /.footer-column -->
       <?php endif; ?>
       
       <?php if (!empty($site_footer)): ?>
-        <div class="column left footer-column copyright-footer">
+        <div class="column right footer-column copyright-footer">
           &copy; <?php print date('Y'); ?> <?php print $site_footer; ?>
-        </div> <!-- /.column /.left /.footer-column /.copyright-footer -->
+        </div> <!-- /.column /.right /.footer-column /.copyright-footer -->
       <?php endif; ?>
     </div> <!-- /.row /.clearfix -->
   </footer> <!-- /#footer /.row /.clearfix -->

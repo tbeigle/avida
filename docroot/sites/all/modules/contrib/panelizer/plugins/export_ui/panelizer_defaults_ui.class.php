@@ -35,6 +35,12 @@ class panelizer_defaults_ui extends ctools_export_ui {
 
     // Change the callbacks for everything:
     foreach ($this->plugin['menu']['items'] as $key => $item) {
+      // The item has already been set; continue to next item to avoid shifting
+      // items onto the page arguments array more than once.
+      if ($this->plugin['menu']['items'][$key]['access callback'] == 'panelizer_has_choice_callback') {
+        continue;
+      }
+
       $this->plugin['menu']['items'][$key]['access callback'] = 'panelizer_has_choice_callback';
       $this->plugin['menu']['items'][$key]['access arguments'] = array(4, 5, '');
       $this->plugin['menu']['items'][$key]['page callback'] = 'panelizer_export_ui_switcher_page';
@@ -93,9 +99,15 @@ class panelizer_defaults_ui extends ctools_export_ui {
     $export_key = $this->plugin['export']['key'];
     // When adding a machine name, the entity/bundle are left off so the user
     // does not have to deal with it. We put it back here behind the scenes.
-    $name = $form_state['values'][$export_key];
+    $name = implode(':', array($this->entity_handler->entity_type, $this->entity_bundle, $form_state['values'][$export_key]));
 
-    form_set_value($form['info'][$export_key], implode(':', array($this->entity_handler->entity_type, $this->entity_bundle, $name)), $form_state);
+    // The page_manager view mode is the pre-view mode support method; we have
+    // to add this view mode as the name if it's a different view mode.
+    if ($this->entity_view_mode != 'page_manager') {
+      $name .= ':' . $this->entity_view_mode;
+    }
+
+    form_set_value($form['info'][$export_key], $name, $form_state);
   }
 
   // Simplest way to override the drupal_goto from parent.

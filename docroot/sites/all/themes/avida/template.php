@@ -16,18 +16,8 @@ function avida_preprocess_block(&$vars) {
 function avida_preprocess_html(&$vars) {
   global $theme_path;
   
-  $vars['html_shiv'] = '/';
-  
-  if (!empty($vars['directory'])) {
-    $vars['html_shiv'] .= trim($vars['directory'], '/');
-  }
-  else {
-    $vars['html_shiv'] .= trim($theme_path, '/');
-  }
-  
-  $vars['html_shiv'] .= '/scripts/js/vendor/html5shiv.js';
-  
   _avida_apple_touch_icons();
+  _avida_lt_ie_9($vars, $theme_path);
 }
 
 /**
@@ -36,6 +26,41 @@ function avida_preprocess_html(&$vars) {
 function avida_preprocess_page(&$vars) {
   $vars['show_breadcrumb'] = theme_get_setting('show_breadcrumb');
   $vars['site_footer'] = theme_get_setting('site_footer');
+}
+
+/**
+ * Implements template_preprocess_views_view_fields()
+ */
+function avida_preprocess_views_view_list(&$vars) {
+  if ($vars['view']->name != 'staff') return;
+  
+  $counter = $two_col_counter = 1;
+  foreach ($vars['classes_array'] as $index => &$class) {
+    $add_class = ' col-' . $counter . ' two-col-col-' . $two_col_counter;
+    $class = trim($class . $add_class);
+    
+    if ($counter == 3) {
+      $counter = 1;
+    }
+    else {
+      $counter++;
+    }
+    
+    $two_col_counter = $two_col_counter == 1 ? 2 : 1;
+  }
+}
+
+/**
+ * Implements template_preprocess_panels_pane()
+ */
+function avida_preprocess_panels_pane(&$vars) {
+  global $_avida_pane_ids;
+  if (empty($_avida_pane_ids)) $_avida_pane_ids = array();
+  
+  if (!empty($vars['title']) && empty($vars['id'])) {
+    $id_base = 'avida-pane-' . strtolower(str_replace(' ', '-', $vars['title']));
+    $vars['id'] = 'id="' . _avida_unique_id($id_base, $_avida_pane_ids) . '"';
+  }
 }
 
 /**
@@ -62,4 +87,44 @@ function _avida_apple_touch_icons() {
     
     drupal_add_html_head($element, 'apple_touch_icon_' . $size);
   }
+}
+
+/**
+ * Helper function for building the IE8 and below contents
+ */
+function _avida_lt_ie_9(&$vars, $theme_path) {
+  $path_prefix = '/' . trim(!empty($vars['directory']) ? $vars['directory'] : $theme_path, '/');
+  
+  $vars['lt_ie_9'] = array(
+    '#prefix' => '<!--[if lt IE 9]>',
+    '#suffix' => '<![endif]-->',
+    array(
+      '#markup' => '<script src="' . $path_prefix . '/scripts/js/vendor/html5shiv.js"></script>',
+    ),
+    array(
+      '#markup' => '<link rel="stylesheet" type="text/css" href="' . $path_prefix . '/styles/css/lt-ie-9.css" media="all" />',
+    ),
+  );
+}
+
+/**
+ * Helper function for creating unique HTML id attributes
+ */
+function _avida_unique_id($test_id, $ids = array()) {
+  if (!in_array($test_id, $ids)) {
+    $id = $test_id;
+  }
+  else {
+    $counter = 0;
+    while (empty($id)) {
+      $test = $test_id . '-' . $counter;
+      if (!in_array($test, $ids)) {
+        $id = $test;
+      }
+      
+      $counter++;
+    }
+  }
+  
+  return $id;
 }

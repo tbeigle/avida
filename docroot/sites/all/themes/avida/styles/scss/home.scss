@@ -1,1 +1,237 @@
 @import "mixins";
+
+.panels-flexible-one_three_two {
+  .panels-flexible-region-inside {
+    padding: 0;
+  }
+  .panels-flexible-row {
+    padding-bottom: 0;
+  }
+  
+  .panels-flexible-row-one_three_two-1 {
+    margin: 0 0 22px;
+  }
+  
+  .panel-separator {
+    margin: 0;
+  }
+  
+  .panels-flexible-row-one_three_two-main-row {
+    margin: 0 0 40px;
+  }
+}
+
+.avida-132.bottom-col {
+  .container {
+    padding: 0;
+  }
+  
+  &.col-1 {
+    padding: 0 30px 0 60px;
+    font: $fsHmBttmCols $fontFamSansMain;
+    line-height: 1.72;
+    
+    text: {
+      align: right;
+    }
+    
+    p {
+      margin: 1em 0 0;
+    }
+  }
+  &.col-2 {
+    padding: 0 60px 0 30px;
+  }
+}
+
+.home-page {
+  .page-header {
+    margin-bottom: 32px;
+  }
+  
+  h1 {
+    float: right;
+    height: auto;
+    padding: 20px 0 18px;
+    background: url('../../images/border-with-bulb-170x10.png') right bottom no-repeat;
+    margin: 0 0 10px;
+  }
+  
+  .banner {
+    width: 100%;
+    height: 278px;
+    padding: 20px 40px 0 370px;
+    background: $colTitleTan url('../../images/banner-home.png') 0 bottom no-repeat;
+    text-align: right;
+    
+    h2 {
+      clear: both;
+      padding: {
+        left: 173px;
+      }
+      font: italic 14px/1.6 $fontFamSansSpec;
+      color: $colFontBlck
+    }
+    
+    p {
+      padding: 0;
+      background: none;
+      
+      a {
+        display: inline-block;
+        height: 40px;
+        padding: 7px 16px 0;
+        background: #fff;
+        border: 1px solid $colLrnMrBrdr;
+        font-size: 14px;
+        
+        @include linkVisited(text-decoration, underline);
+        @include hoverActiveFocus(text-decoration, none);
+        @include linkAllStates(color, $colFontBlck);
+      }
+    }
+  }
+  .home-connect-pane,
+  .node {
+    h2 {
+      margin: 0;
+      font: 24px/1 $fontFamSansSpec;
+      
+      text: {
+        transform: uppercase;
+      }
+    }
+    
+    h2,
+    h2 a:link,
+    h2 a:visited,
+    h2 a:hover,
+    h2 a:active,
+    h2 a:focus {
+      color: $colFontBlck;
+    }
+  }
+  
+  .views-list.events-list {
+    ul.events {
+      padding-top: 35px;
+      
+      li {
+        position: relative;
+        padding: 0 0 25px;
+        background: url('../../images/bg-home-events-list-item.png') 26px 0 repeat-y;
+        
+        &:last-child {
+          padding-bottom: 0;
+          background: none;
+        }
+      }
+    }
+    
+    .brenham-column-content {
+      position: static;
+      padding-top: 0;
+    }
+    
+    .brenham-sidebar {
+      //top: 25px;
+    }
+    
+    li:first-child .brenham-sidebar {
+      top: 0;
+    }
+    
+    .event-title {
+      padding-left: 74px;
+    }
+  }
+}
+
+.avida-132.middle-col {
+  &.col-1 {
+    padding-right: 5px;
+  }
+  
+  &.col-2 {
+    padding: 0 5px;
+  }
+  
+  &.col-3 {
+    padding-left: 5px;
+  }
+}
+
+.home-3-col-blocks {
+  width: 100%;
+  padding-top: 150px;
+  background: {
+    position: center top;
+    repeat: no-repeat;
+  }
+  
+  .content,
+  .pane-content {
+    padding: 8px 0 7px;
+    text-align: center;
+    color: #fff;
+    font: {
+      family: $fontFamSansSpec;
+    }
+    
+    h2 {
+      margin: 0;
+      text-transform: uppercase;
+      font: {
+        weight: normal;
+        size: 23px;
+      }
+      
+      line-height: 1.3;
+    }
+    
+    p {
+      margin: 2px 0 0;
+    }
+    
+    a {
+      font-size: 15px;
+      line-height: 1.25;
+      text-transform: lowercase;
+      @include linkAllStates(color, #fff);
+      @include linkVisited(text-decoration, underline);
+      @include hoverActiveFocus(text-decoration, none);
+    }
+  }
+  
+  &.getting-started {
+    max-width: 283px;
+    background-image: url('../../images/home-box-getting-started.jpg');
+    
+    .content,
+    .pane-content {
+      background: $colLogoGrn;
+    }
+  }
+  
+  &.volunteer {
+    max-width: 284px;
+    background-image: url('../../images/home-box-volunteer.jpg');
+    margin: auto;
+    
+    .content,
+    .pane-content {
+      background: $colLogoLght;
+    }
+  }
+  
+  &.clinical-trials {
+    max-width: 286px;
+    background-image: url('../../images/home-box-clinical-trials.jpg');
+    margin: 0 0 0 auto;
+    
+    .content,
+    .pane-content {
+      background: $colLogoDrk;
+    }
+  }
+}

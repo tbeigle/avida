@@ -1,0 +1,15 @@
+name = AVIDA: Homepage
+core = 7.x
+package = AVIDA
+dependencies[] = ctools
+dependencies[] = fe_block
+dependencies[] = panels
+features[ctools][] = panels:layouts:1
+features[fe_block_boxes][] = home_block_1
+features[fe_block_boxes][] = home_block_2
+features[fe_block_boxes][] = home_block_3
+features[fe_block_settings][] = block-home_block_1
+features[fe_block_settings][] = block-home_block_2
+features[fe_block_settings][] = block-home_block_3
+features[features_api][] = api:2
+features[panels_layout][] = one_three_two

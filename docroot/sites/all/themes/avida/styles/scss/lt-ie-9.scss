@@ -1,0 +1,72 @@
+@import "mixins";
+
+#page-wrapper {
+  &> .inner {
+    width: $wdthWrapInner;
+  }
+}
+
+.row {
+  //width: 1020px;
+}
+
+// Orange circles
+.orange-circle {
+  background: url('../../images/ie-bg-orange-circle.png') 0 0 no-repeat;
+}
+
+// Logo and navigation
+.page-header {
+  .logo-header {
+    width: $wdthLogoHdrMax;
+  }
+}
+
+// Sidebar
+.with-right-sidebar {
+  #content-wrapper {
+    width: $wdthCntntWthSBMax;
+  }
+  
+  #page-sidebar-second {
+    width: $wdthSBMax;
+  }
+}
+
+// Footer
+#footer {
+  width: $wdthWrapInner;
+}
+
+// Staff page
+.staff-list {
+  .staff-photo,
+  .staff-about {
+    width: $wdthStfPhoto;
+    height: $wdthStfPhoto;
+  }
+  .staff-photo {
+    position: relative;
+    border: none;
+    
+    img {
+      position: relative;
+      top: 5px;
+      z-index: 5;
+    }
+  }
+}
+
+// Overlays
+.ie-overlay {
+  position: absolute;
+  z-index: 10;
+  
+  &.ie-overlay-staff-photo {
+    left: 0;
+    top: 0;
+    width: $wdthStfPhoto;
+    height: $wdthStfPhoto;
+    background: url('../../images/ie-overlay-staff-photo.png') 0 0 no-repeat;
+  }
+}

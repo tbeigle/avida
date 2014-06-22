@@ -1,0 +1,38 @@
+#page-wrapper > .inner {
+  width: 964px; }
+
+.orange-circle {
+  background: url("../../images/ie-bg-orange-circle.png") 0 0 no-repeat; }
+
+.page-header .logo-header {
+  width: 146px; }
+
+.with-right-sidebar #content-wrapper {
+  width: 674px; }
+.with-right-sidebar #page-sidebar-second {
+  width: 204px; }
+
+#footer {
+  width: 964px; }
+
+.staff-list .staff-photo,
+.staff-list .staff-about {
+  width: 160px;
+  height: 160px; }
+.staff-list .staff-photo {
+  position: relative;
+  border: none; }
+  .staff-list .staff-photo img {
+    position: relative;
+    top: 5px;
+    z-index: 5; }
+
+.ie-overlay {
+  position: absolute;
+  z-index: 10; }
+  .ie-overlay.ie-overlay-staff-photo {
+    left: 0;
+    top: 0;
+    width: 160px;
+    height: 160px;
+    background: url("../../images/ie-overlay-staff-photo.png") 0 0 no-repeat; }

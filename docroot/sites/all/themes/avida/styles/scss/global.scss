@@ -1,4 +1,5 @@
 @import "mixins";
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -7,21 +8,70 @@
 
 body {
   width: 100%;
+  background: $colLogoDrk;
   margin: 0;
+  font: 12px/1.2 $fontFamSansMain;
+  color: $colFontMain;
+}
+
+h1 {
+  height: 122px;
+  padding: {
+    top: 74px;
+    right: 20px;
+    left: 20px;
+  }
+  
+  background: $colTitleTan;
+  margin: 30px 0 64px;
+  font: bold 34px/1.1 $fontFamSansSpec;
+  color: $colFontBlck;
+}
+
+.field-name-field-page-body {
+  h2 {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+h3 {
+  margin-top: 0;
+}
+
+p {
+  margin: 0 0 12px;
 }
 
 a {
   @include vendorize(transition, all 0.25s ease);
-  @include linkAllStates(text-decoration, none);
   @include linkAllStates(outline, none);
-  //@include linkVisited(color, $colPreEPJacket);
-  //@include hoverActiveFocus(color, $colDenim);
+  @include linkAllStates(color, $colLogoGrn);
+  @include linkVisited(text-decoration, none);
+  @include hoverActiveFocus(text-decoration, underline);
 }
 
-body {
-  width: 100%;
-  margin: 0;
-  font: 16px/1.5 helvetica, arial, sans-serif;
+#page-wrapper {
+  background: url('../../images/bg-lines.jpg') 0 0 repeat;
+  
+  &> .inner {
+    max-width: $wdthWrapInner;
+    padding: 28px 25px 40px;
+    background: #fff;
+    border: {
+      left: 2px solid $colPageBrdr;
+      right: 2px solid $colPageBrdr;
+    }
+  }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
 
 .container {
@@ -31,13 +81,33 @@ body {
 
 .row {
   width: 100%;
-  max-width: 1020px;
+  max-width: $wdthRowMax;
   margin: auto;
 }
 
 .body-emph {
   text-align: center;
   color: $colLogoDrk;
+}
+
+.mobile-title {
+  .block-title {
+    display: none;
+  }
+}
+
+.page-sub-section {
+  padding-top: 28px;
+  background: url('../../images/border-with-bulb-1020x8.png') right top no-repeat;
+  margin-top: 20px;
+  
+  h1,h2,h3,h4,h5 {
+    margin-top: 0;
+  }
+}
+
+.panel-flexible .panel-separator {
+  display: none;
 }
 
 .horizontal.with-bullets {
@@ -69,5 +139,587 @@ body {
         display: none;
       }
     }
+  }
+}
+
+.orange-circle {
+  width: 52px;
+  height: 52px;
+  padding: 6px 0 0;
+  background: $colDateCircle;
+  @include vendorize(border-radius, 50%);
+  font: 12px/1 $fontFamSansSpec;
+  
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+  
+  color: #fff;
+  
+  strong {
+    display: block;
+    
+    font: {
+      size: 28px;
+      weight: normal;
+    }
+  }
+}
+
+.more-box,
+.h2-short-line  h2 {
+  padding: 0 0 28px;
+  background: url('../../images/border-with-bulb-130x8.png') right bottom no-repeat;
+}
+
+.more-box {
+  .pane-content,
+  p {
+    a {
+      display: inline-block;
+      height: 36px;
+      padding: {
+        top: 6px;
+        right: 16px;
+        left: 16px;
+      }
+      background: $colLrnMrBG;
+      border: 1px solid $colLrnMrBrdr;
+      font: 12px/1.5 $fontFamSansSpec;
+      
+      &:link,
+      &:visited,
+      &:hover,
+      &:focus,
+      &:active {
+        color: $colFontBlck;
+      }
+      
+      @include linkVisited(text-decoration, underline);
+      @include hoverActiveFocus(text-decoration, none);
+    }
+  }
+}
+
+// Basic pages with events sidebar
+body.single-node {
+  &.basic-page {
+    .panel-display.burr-flipped.container {
+      padding: 0;
+    }
+    .burr-flipped-content {
+      width: 77.4725%;
+      overflow: hidden;
+      
+      .panopoly-image-full {
+        float: left;
+        width: auto;
+        max-width: 50%;
+        padding: 0 20px 10px 0;
+      }
+    }
+    .burr-flipped-content-inner {
+      margin-right: 5.1063%;
+    }
+    .burr-flipped-sidebar {
+      float: right;
+      width: 22.5274%;
+    }
+  }
+}
+
+.views-list {
+  .container {
+    padding: 0;
+  }
+  
+  &.events-list {
+    ul.events {
+      padding: 0;
+      margin: 0;
+      
+      li {
+        list-style: none;
+        padding: 36px 0 0 0;
+        margin: 0;
+        
+        &:first-child {
+          padding-top: 0;
+        }
+      }
+    }
+    
+    .brenham-container {
+      margin: 0;
+    }
+    
+    .event-title {
+      margin: 0 0 4px;
+      font: 14px/1 $fontFamSansSpec;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $colFontTurq;
+      
+      a {
+        @include linkAllStates(color, $colFontTurq);
+      }
+    }
+    
+    .brenham-column-content {
+      position: relative;
+      padding-left: 72px;
+    }
+    
+    .brenham-sidebar {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 52px;
+    }
+    
+    .brenham-sidebar-inner {
+      margin-right: 0;
+    }
+    
+    .brenham-content {
+      float: right;
+      width: 100%;
+      font-size: $fsHmBttmCols;
+      line-height: 1.45;
+      
+      p {
+        margin: 3px 0 0;
+      }
+    }
+  }
+}
+
+// Logo and navigation
+.page-header {
+  position: relative;
+  
+  .logo-header {
+    width: 15.114%;
+    max-width: $wdthLogoHdrMax;
+  }
+  
+  .header-logo {
+    position: relative;
+    z-index: 2;
+    
+    a,
+    img {
+      display: block;
+    }
+  }
+  
+  .nav-region {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    
+    .block-menu {
+      .content {
+        ul.menu {
+          padding: 0;
+          margin: 0;
+        }
+        
+        &> ul.menu {
+          text-align: right;
+          color: $colFontNavLink;
+          @include noText();
+          
+          a {
+            @include linkAllStates(color, $colFontNavLink);
+          }
+          
+          li {
+            list-style: none;
+            
+            li {
+              padding: 0;
+              margin: 0;
+              
+              a {
+                display: block;
+                padding: 5px 10px;
+                @include linkAllStates(color, $colFontBlck);
+                
+                &:link,
+                &:visited {
+                  background: #fff;
+                  //background: $colLrnMrBG;
+                }
+                
+                &:hover,
+                &:active,
+                &:focus {
+                  //background: #fff;
+                  background: $colLrnMrBG;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+          
+          &> li {
+            position: relative;
+            list-style: none;
+            display: inline-block;
+            background: url('../../images/bg-nav-link-leaf.png') 0 0 no-repeat;
+            padding: 0 0 0 20px;
+            margin: 0 0 0 10px;
+            overflow: visible;
+            font: 14px/1.4285 $fontFamSansSpec;
+            
+            .menu {
+              position: absolute;
+              left: 20px;
+              display: none;
+              width: 100%;
+              min-width: 140px;
+              border: 1px solid $colLogoGrn;
+              border: {
+                top: none;
+              }
+              
+              li {
+                border-top: 1px solid $colLogoGrn;
+                
+                &:first-child {
+                  border-top: none;
+                }
+              }
+            }
+            
+            &:first-child {
+              background: none;
+              padding: 0;
+              margin: 0;
+              
+              .menu {
+                left: 0;
+                border: {
+                  
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Sidebar
+.with-right-sidebar {
+  #content-wrapper {
+    width: 75.2825%;
+    max-width: $wdthCntntWthSBMax;
+  }
+  
+  #page-sidebar-second {
+    width: 22.5165%;
+    max-width: $wdthSBMax;
+  }
+}
+
+// Footer
+#footer {
+  width: 100%;
+  max-width: $wdthWrapInner;
+  padding: 25px 60px;
+  margin: auto;
+  
+  a {
+    @include linkAllStates(color, #fff);
+  }
+  
+  .copyright-footer a {
+    @include linkVisited(text-decoration, underline);
+    @include hoverActiveFocus(text-decoration, none);
+  }
+}
+
+.footer-column.left {
+  display: table;
+  width: 71%;
+  max-width: 600px;
+  padding-top: 4px;
+  
+  .region-footer {
+    display: table-row;
+  }
+}
+
+.footer-nav {
+  display: table-cell;
+  width: 25%;
+  padding-left: 6px;
+  border-left: 2px solid #fff;
+  
+  h2,
+  h2 > a {
+    display: block;
+    color: #fff;
+    @include linkAllStates(color, #fff);
+  }
+  
+  h2 {
+    max-width: 90px;
+    margin: 0 0 6px;
+    font: bold 16px/14px $fontFamSansSpec;
+    text-transform: uppercase;
+  }
+  
+  .menu {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .content {
+    width: 100%;
+    
+    li {
+      list-style: none;
+      display: block;
+      padding: 0;
+      margin: 5px 0 0;
+      font: $fsHmBttmCols $fontFamSansSpec;
+      line-height: 1.1818;
+    }
+  }
+}
+
+.copyright-footer {
+  font: 11px/1.64 'Chivo', Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+// Staff page
+.staff-list {
+  padding-top: 10px;
+  
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    list-style: none;
+    float: left;
+    width: 33.3333%;
+    padding: 0 5px;
+    margin: 0 0 64px;
+    text-align: center;
+    
+    &.col-3 {
+      //clear: right;
+      margin-right: 0;
+    }
+    
+    &.col-1 {
+      clear: left;
+    }
+  }
+  
+  .staff-photo,
+  .staff-about {
+    width: 100%;
+    max-width: $wdthStfPhoto;
+  }
+  
+  .staff-photo {
+    border: 5px solid $colLogoLght;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    @include noText();
+  }
+  
+  .staff-photo,
+  .staff-photo img {
+    @include vendorize(border-radius, 50%);
+  }
+  
+  .staff-position,
+  .staff-name {
+    margin: 0 0 12px;
+    
+    font: {
+      size: 14px;
+      family: $fontFamSansSpec;
+    }
+  }
+  
+  .staff-position {
+    font: {
+      weight: normal;
+    }
+    
+    text-transform: uppercase;
+    color: $colFontDrk;
+  }
+  
+  .staff-name {
+    margin-bottom: 13px;
+    
+    font: {
+      weight: bold;
+    }
+    
+    letter-spacing: 1px;
+    color: $colLogoLght;
+  }
+  
+  .staff-about {
+    margin: auto;
+    
+    p {
+      margin: 1em 0 0;
+      
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+// Events page
+.event-calendar-page {
+  .views-list.events-list {
+    .event-title {
+      margin-bottom: 0.5em;
+      font-size: 18px;
+    }
+  }
+  
+  ul.events {
+    li {
+      padding-top: 0;
+      overflow: hidden;
+      
+      .left {
+        float: left;
+        width: 23.404%;
+        max-width: 100px;
+      }
+      
+      .right {
+        float: left;
+        width: 76.596%;
+      }
+    }
+  }
+  
+  .event-date {
+    margin-bottom: 1em;
+  }
+  
+  .field-label {
+    font: {
+      weight: bold;
+      family: $fontFamSansSpec;
+      size: 14px;
+    }
+    
+    color: $colFontBlck;
+  }
+}
+
+// Single event page
+.page-single-event {
+  .bryant-sidebar {
+    max-width: 100px;
+  }
+  .event-date {
+    margin-bottom: 1em;
+  }
+  .field-label {
+    font: {
+      weight: bold;
+      family: $fontFamSansSpec;
+      size: 14px;
+    }
+    
+    color: $colFontBlck;
+  }
+}
+
+// Two Columns, Image Left
+.avida-two-cols-img {
+  .avida-col-content {
+    float: left;
+    width: $wdthTwoColsMain;
+    
+    &> .inside {
+      margin-right: 5.1063%;
+    }
+    
+    .avida-main-content-img {
+      width: 50%;
+    }
+  }
+  
+  .avida-col-sidebar {
+    float: right;
+    width: $wdthTwoColsAside;
+  }
+  
+  &.avida-img-left {
+    .avida-main-content-img {
+      float: left;
+      padding: 0 20px 20px 0;
+    }
+  }
+  &.avida-img-right {
+    .avida-main-content-img {
+      float: right;
+      padding: 0 0 20px 20px;
+    }
+  }
+}
+
+.page-node-11 {
+  .pane-bundle-basic-file {
+    h2.pane-title {
+      font-size: 1em;
+    }
+  }
+}
+
+.pane-node-field-page-body {
+  overflow: hidden;
+}
+.page-sub-section .pane-content img,
+.pane-node-field-page-body img {
+  width: auto;
+  max-width: 50%;
+  float: left;
+  padding: 0 20px 10px 0;
+}
+
+#avida-pane-students {
+  padding-top: 0;
+  margin-top: 0;
+  background: none;
+}
+
+.burr-flipped-sidebar .panels-ipe-portlet-wrapper {
+  padding-bottom: 20px;
+}
+
+.avida-one-column {
+  .avida-img {
+    float: left;
+    max-width: 50%;
+    padding: 0 20px 10px 0;
+  }
+  
+  .avida-main-content {
+    
   }
 }

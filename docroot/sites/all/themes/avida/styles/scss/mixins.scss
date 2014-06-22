@@ -2,8 +2,33 @@
 $colLogoLght: #008e91;
 $colLogoDrk: #034f55;
 $colLogoGrn: #afb81d;
+$colPageBrdr: #e0e1d7;
+$colTitleTan: #f6f5f1;
+$colLrnMrBG: #f1f1e9;
+$colLrnMrBrdr: #d0d0d0;
+$colFontMain: #777;
+$colFontNavLink: #767676;
+$colFontDrk: #333;
+$colFontBlck: #292418;
+$colFontTurq: #008e91;
+$colDateCircle: #f1601d;
+
+// Dimensions
+$wdthWrapInner: 964px;
+$wdthRowMax: 1020px;
+$wdthLogoHdrMax: 146px;
+$wdthCntntWthSBMax: 674px;
+$wdthSBMax: 204px;
+$wdthStfPhoto: 160px;
+$wdthTwoColsMain: 77.4725%;
+$wdthTwoColsAside: 22.5274%;
+
+// Font sizes
+$fsHmBttmCols: 13px;
 
 // Font families
+$fontFamSansMain: arial, helvetica, sans-serif;
+$fontFamSansSpec: 'Chivo', arial, helvetica, sans-serif;
 
 // Mixins
 @mixin vendorize($property, $value) {
@@ -51,4 +76,9 @@ $colLogoGrn: #afb81d;
   &:hover, &:active, &:focus {
     #{$property}: $value;
   }
+}
+
+@mixin noText() {
+  font-size: 0;
+  line-height: 0;
 }

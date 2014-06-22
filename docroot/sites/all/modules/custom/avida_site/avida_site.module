@@ -1,0 +1,55 @@
+<?php
+/**
+ * @file
+ * Custom module for miscellaneous features on avidainc.com
+ */
+
+/**
+ * Implements hook_init()
+ */
+function avida_site_init() {
+  /*$data = 'http://fonts.googleapis.com/css?family=Chivo:400,400italic,900';
+  $options = array(
+    'type' => 'external',
+  );
+  
+  drupal_add_css($data, $options);*/
+}
+
+/**
+ * Implements hook_date_formatter_dates_alter().
+ */
+function avida_site_date_formatter_dates_alter(&$dates, $context) {
+  $format_type = !empty($context['display']['settings']['format_type']) ? $context['display']['settings']['format_type'] : '';
+  if ($format_type != 'event_teaser') return;
+  
+  foreach ($dates as &$value) {
+    $formatted_array = explode(' ', $value['formatted']);
+    $value['formatted'] = $formatted_array[0] . ' <strong>' . $formatted_array[1] . '</strong>';
+  }
+}
+
+/**
+ * Implements hook_form_alter()
+ */
+function avida_site_form_alter(&$form, &$form_state, $form_id) {
+  if (strpos($form_id, '_node_form') === FALSE || !isset($form['title'])) return;
+  
+  $form['#validate'][] = 'avida_site_node_form_validate';
+  
+  $title_chars = variable_get('avida_site_max_title_chars', 50);
+  $form['title']['#description'] = !empty($form['title']['#description']) ? $form['title']['#description'] . ' ' : '';
+  $form['title']['#description'] .= t('The title must not exceed !chars characters in length.', array('!chars' => $title_chars));
+}
+
+/**
+ * Performs custom validation on node add/edit forms
+ */
+function avida_site_node_form_validate(&$form, &$form_state) {
+  $vals = (object) $form_state['values'];
+  
+  $title_chars = variable_get('avida_site_max_title_chars', 50);
+  if (strlen($vals->title) > $title_chars) {
+    form_set_error('title', 'The title is too long.');
+  }
+}
