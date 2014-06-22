@@ -22,7 +22,8 @@
     font-size: 18px; }
   .home-page h2 {
     padding-left: 0; }
-  .home-page .banner p {
+  .home-page .banner p,
+  .home-page .banner h2 {
     padding-left: 0; } }
 @media all and (max-width: 690px) {
   .page-header .nav-region .block-menu .content > ul.menu > li {
